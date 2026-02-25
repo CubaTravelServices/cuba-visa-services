@@ -4,47 +4,47 @@
 
 @layer base {
   :root {
-    --background: 30 33% 96%;
-    --foreground: 350 40% 16%;
+    --background: 44 33% 97%;
+    --foreground: 216 56% 10%;
 
     --card: 0 0% 100%;
-    --card-foreground: 350 40% 16%;
+    --card-foreground: 216 56% 10%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 350 40% 16%;
+    --popover-foreground: 216 56% 10%;
 
-    --primary: 350 40% 16%;
-    --primary-foreground: 30 33% 96%;
+    --primary: 216 56% 10%;
+    --primary-foreground: 44 33% 97%;
 
-    --secondary: 350 55% 35%;
-    --secondary-foreground: 0 0% 100%;
+    --secondary: 42 50% 54%;
+    --secondary-foreground: 216 56% 10%;
 
-    --muted: 28 25% 91%;
-    --muted-foreground: 350 15% 45%;
+    --muted: 40 30% 92%;
+    --muted-foreground: 212 14% 48%;
 
-    --accent: 350 55% 35%;
-    --accent-foreground: 0 0% 100%;
+    --accent: 42 50% 54%;
+    --accent-foreground: 216 56% 10%;
 
     --destructive: 0 84% 60%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 28 18% 86%;
-    --input: 28 18% 86%;
-    --ring: 350 55% 35%;
+    --border: 40 20% 88%;
+    --input: 40 20% 88%;
+    --ring: 42 50% 54%;
 
     --radius: 0.5rem;
 
-    /* Cuba Travel Services Brand Tokens */
-    --navy: 350 40% 16%;
-    --navy-mid: 350 35% 22%;
-    --gold: 350 55% 35%;
-    --gold-light: 350 50% 45%;
-    --gold-pale: 28 40% 85%;
-    --ivory: 30 33% 96%;
-    --ivory-mid: 28 25% 90%;
-    --slate: 350 12% 48%;
+    /* Cuba Visa Brand Tokens */
+    --navy: 216 56% 10%;
+    --navy-mid: 220 48% 17%;
+    --gold: 42 50% 54%;
+    --gold-light: 42 58% 66%;
+    --gold-pale: 40 55% 87%;
+    --ivory: 44 33% 97%;
+    --ivory-mid: 40 30% 90%;
+    --slate: 212 14% 48%;
     --white: 0 0% 100%;
-    --darkest: 350 45% 8%;
+    --darkest: 220 60% 6%;
 
     --font-display: 'Cormorant Garamond', Georgia, serif;
     --font-body: 'DM Sans', system-ui, sans-serif;
