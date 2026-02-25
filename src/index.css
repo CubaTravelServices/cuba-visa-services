@@ -4,8 +4,8 @@
 
 @layer base {
   :root {
-    --background: 44 33% 97%;
-    --foreground: 216 56% 10%;
+    --background: 0 0% 100%;
+    --foreground: 217 71% 30%;
 
     --card: 0 0% 100%;
     --card-foreground: 216 56% 10%;
@@ -35,13 +35,13 @@
     --radius: 0.5rem;
 
     /* Cuba Visa Brand Tokens */
-    --navy: 216 56% 10%;
-    --navy-mid: 220 48% 17%;
+    --navy: 217 71% 30%;
+    --navy-mid: 220 60% 22%;
     --gold: 42 50% 54%;
     --gold-light: 42 58% 66%;
     --gold-pale: 40 55% 87%;
-    --ivory: 44 33% 97%;
-    --ivory-mid: 40 30% 90%;
+    --ivory: 0 0% 100%;
+    --ivory-mid: 0 0% 96%;
     --slate: 212 14% 48%;
     --white: 0 0% 100%;
     --darkest: 220 60% 6%;
