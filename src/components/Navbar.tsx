@@ -30,10 +30,10 @@ const Navbar = () => {
   return (
     <>
       <nav
-        className={`sticky top-0 z-50 h-[140px] flex items-center justify-between px-[6%] bg-burgundy backdrop-blur-xl border-b border-gold/20 transition-shadow duration-300 ${scrolled ? "shadow-lg shadow-navy/5" : ""}`}
+        className={`sticky top-0 z-50 flex items-center justify-between px-[6%] bg-burgundy backdrop-blur-xl border-b border-gold/20 transition-all duration-300 ${scrolled ? "h-[80px] shadow-lg shadow-navy/5" : "h-[140px]"}`}
       >
         <a href="/" className="shrink-0">
-          <img src={logo} alt="Cuba Visa Services" className="h-[120px]" />
+          <img src={logo} alt="Cuba Visa Services" className={`transition-all duration-300 ${scrolled ? "h-[60px]" : "h-[120px]"}`} />
         </a>
 
         {/* Desktop nav */}
