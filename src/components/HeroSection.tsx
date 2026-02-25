@@ -1,4 +1,5 @@
 import havanaHero from "@/assets/havana-hero.jpg";
+import consularService from "@/assets/consular-service.jpg";
 import HeroPricing from "./HeroPricing";
 
 const HeroSection = () => (
@@ -36,8 +37,22 @@ const HeroSection = () => (
         </div>
       </div>
 
-      {/* Pricing cards */}
-      <HeroPricing />
+      {/* Image + Pricing cards */}
+      <div className="flex items-start gap-8 max-w-6xl mx-auto">
+        {/* Left: Consular image */}
+        <div className="hidden lg:block flex-shrink-0 w-[280px]">
+          <img
+            src={consularService}
+            alt="Official Cuba visa document with Republic of Cuba consular stamp and passport"
+            className="rounded-xl shadow-[0_20px_60px_rgba(0,0,0,0.4)] border border-white/10"
+          />
+          <p className="text-center text-white/40 text-[11px] mt-3 italic">Official Cuban Consulate Authorization</p>
+        </div>
+        {/* Right: Pricing */}
+        <div className="flex-1">
+          <HeroPricing />
+        </div>
+      </div>
     </div>
   </section>
 );
