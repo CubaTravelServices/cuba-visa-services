@@ -40,7 +40,7 @@ const Navbar = () => {
           {navLinks.map((l) => (
             <a key={l.href} href={l.href} {...(l.external ? { target: "_blank", rel: "noopener noreferrer" } : {})} className="text-sm font-medium text-white/80 hover:text-gold transition-colors">{l.label}</a>
           ))}
-          <a href="#pricing" className="btn-gold text-[12px] py-2.5 px-5">Apply Now</a>
+          <a href="/apply?plan=standard" className="btn-gold text-[12px] py-2.5 px-5">Apply Now</a>
         </div>
 
         {/* Mobile hamburger */}
@@ -85,7 +85,7 @@ const Navbar = () => {
             </a>
           ))}
           <a
-            href="#pricing"
+            href="/apply?plan=standard"
             onClick={() => setMenuOpen(false)}
             className="btn-gold text-center mt-6"
           >
