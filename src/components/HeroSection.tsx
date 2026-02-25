@@ -2,12 +2,12 @@ import havanaHero from "@/assets/havana-hero.jpg";
 import consularService from "@/assets/consular-service.jpg";
 import HeroPricing from "./HeroPricing";
 
-const HeroSection = () => (
-  <section className="bg-navy relative overflow-hidden">
+const HeroSection = () =>
+<section className="bg-navy relative overflow-hidden">
     <div
-      className="absolute inset-0 bg-cover bg-center opacity-20"
-      style={{ backgroundImage: `url(${havanaHero})` }}
-    />
+    className="absolute inset-0 bg-cover bg-center opacity-20"
+    style={{ backgroundImage: `url(${havanaHero})` }} />
+
     <div className="absolute inset-0 bg-gradient-to-r from-[hsl(var(--navy))] via-[hsl(var(--navy))/0.85] to-[hsl(var(--navy))/0.7]" />
     <div className="absolute inset-0" style={{ backgroundImage: "radial-gradient(ellipse at 70% 40%, rgba(201,168,76,0.12), transparent 60%)" }} />
     <div className="relative z-10 px-[6%] py-16 lg:py-20">
@@ -24,28 +24,28 @@ const HeroSection = () => (
         </p>
         <div className="flex flex-wrap justify-center gap-8 mt-8">
           {[
-            ["15+", "Years in service"],
-            ["500K+", "Visas processed"],
-            ["3", "Airport offices"],
-            ["~0 min", "Processing time"],
-          ].map(([num, label]) => (
-            <div key={label}>
+        ["15+", "Years in service"],
+        ["500K+", "Visas processed"],
+        ["3", "Airport offices"],
+        ["~0 min", "Processing time"]].
+        map(([num, label]) =>
+        <div key={label}>
               <div className="font-display text-[32px] font-bold text-gold-light">{num}</div>
               <div className="text-[12px] text-white/50">{label}</div>
             </div>
-          ))}
+        )}
         </div>
       </div>
 
       {/* Image + Pricing cards */}
-      <div className="flex items-start gap-8 max-w-6xl mx-auto">
+      <div className="flex items-start gap-8 max-w-6xl mx-auto shadow-none">
         {/* Left: Consular image */}
         <div className="hidden lg:block flex-shrink-0 w-[280px]">
           <img
-            src={consularService}
-            alt="Official Cuba visa document with Republic of Cuba consular stamp and passport"
-            className="rounded-xl shadow-[0_20px_60px_rgba(0,0,0,0.4)] border border-white/10"
-          />
+          src={consularService}
+          alt="Official Cuba visa document with Republic of Cuba consular stamp and passport"
+          className="rounded-xl shadow-[0_20px_60px_rgba(0,0,0,0.4)] border border-white/10" />
+
           <p className="text-center text-white/40 text-[11px] mt-3 italic">Official Cuban Consulate Authorization</p>
         </div>
         {/* Right: Pricing */}
@@ -54,7 +54,7 @@ const HeroSection = () => (
         </div>
       </div>
     </div>
-  </section>
-);
+  </section>;
+
 
 export default HeroSection;
