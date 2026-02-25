@@ -23,7 +23,7 @@ const plans = [
   features: [
   { text: "Includes Everything From Standard Package Plus:", italic: true },
   "Priority Customer Support",
-  { text: "⚡ 15 Minute Application Processing", bold: true },
+  { text: "15 Minute Application Processing", bold: true },
   { text: "D'Viajeros Assistance Included", bold: true }],
 
   popular: true
@@ -35,10 +35,10 @@ const plans = [
   price: 225,
   features: [
   { text: "Includes Everything From Express Package Plus:", italic: true },
-  { text: "✅ VIP Immigration Processing on Arrival", bold: true },
-  "✅ VIP Departure Lounge Access",
-  "✅ VIP Transfer to City Center",
-  "✅ Meet & Greet at Airport"],
+  { text: "VIP Immigration Processing on Arrival", bold: true },
+  "VIP Departure Lounge Access",
+  "VIP Transfer to City Center",
+  "Meet & Greet at Airport"],
 
   popular: false
 }];
