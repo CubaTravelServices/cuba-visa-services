@@ -33,7 +33,7 @@ const Navbar = () => {
         className={`sticky top-0 z-50 h-[68px] flex items-center justify-between px-[6%] bg-burgundy backdrop-blur-xl border-b border-gold/20 transition-shadow duration-300 ${scrolled ? "shadow-lg shadow-navy/5" : ""}`}
       >
         <a href="/" className="shrink-0">
-          <img src={logo} alt="Cuba Visa Services" className="h-10" />
+          <img src={logo} alt="Cuba Visa Services" className="h-[120px]" />
         </a>
 
         {/* Desktop nav */}
