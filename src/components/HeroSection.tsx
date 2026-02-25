@@ -1,8 +1,17 @@
 import ApplicationCard from "./ApplicationCard";
+import havanaHero from "@/assets/havana-hero.jpg";
 
 const HeroSection = () => (
-  <section className="bg-navy relative overflow-hidden" style={{ backgroundImage: "radial-gradient(ellipse at 70% 40%, rgba(201,168,76,0.08), transparent 60%)" }}>
-    <div className="grid lg:grid-cols-2 items-center gap-12 lg:gap-16 px-[6%] py-16 lg:py-20 min-h-[88vh]">
+  <section className="bg-navy relative overflow-hidden">
+    {/* Background image */}
+    <div
+      className="absolute inset-0 bg-cover bg-center opacity-20"
+      style={{ backgroundImage: `url(${havanaHero})` }}
+    />
+    {/* Gradient overlay */}
+    <div className="absolute inset-0 bg-gradient-to-r from-[hsl(var(--navy))] via-[hsl(var(--navy))/0.85] to-[hsl(var(--navy))/0.7]" />
+    <div className="absolute inset-0" style={{ backgroundImage: "radial-gradient(ellipse at 70% 40%, rgba(201,168,76,0.12), transparent 60%)" }} />
+    <div className="relative z-10 grid lg:grid-cols-2 items-center gap-12 lg:gap-16 px-[6%] py-16 lg:py-20 min-h-[88vh]">
       {/* Left */}
       <div>
         <span className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-gold/30 bg-gold/[0.12] text-gold-light text-[12px] font-semibold uppercase tracking-wider mb-6">
