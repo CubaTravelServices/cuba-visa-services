@@ -1,3 +1,5 @@
+import logo from "@/assets/logo.svg";
+
 const footerLinks = {
   services: ["Cuba E-Visa", "D'Viajeros Form", "Business Visa", "Passport Renewal", "Birth Certificate", "Consular Services"],
   travel: ["Cuba Visa for US Citizens", "Cuba Travel Requirements 2026", "OFAC Categories", "D'Viajeros Guide", "E-Visa vs Tourist Card", "Cuba Travel Insurance"],
@@ -8,9 +10,7 @@ const Footer = () => (
   <footer className="bg-darkest text-white/40 px-[6%] pt-12 pb-8">
     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 max-w-6xl mx-auto mb-10">
       <div>
-        <div className="font-display text-xl text-white font-bold mb-3">
-          Cuba<span className="text-gold">Visa</span>Services
-        </div>
+        <img src={logo} alt="Cuba Visa Services" className="h-16 mb-3" />
         <p className="text-sm leading-relaxed mb-3">
           America's most trusted Cuba e-visa provider since 2009. Direct Cuban Consulate contract. Physical staff at MIA and TPA airports.
         </p>
