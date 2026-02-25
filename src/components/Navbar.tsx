@@ -5,6 +5,7 @@ const navLinks = [
   { label: "Services", href: "#services" },
   { label: "Pricing", href: "#pricing" },
   { label: "Airport Offices", href: "#airports" },
+  { label: "Travel Services", href: "https://CubaTravelServices.com", external: true },
   { label: "FAQ", href: "#faq" },
 ];
 
@@ -36,7 +37,7 @@ const Navbar = () => {
         {/* Desktop nav */}
         <div className="hidden md:flex items-center gap-9">
           {navLinks.map((l) => (
-            <a key={l.href} href={l.href} className="text-sm font-medium text-navy hover:text-gold transition-colors">{l.label}</a>
+            <a key={l.href} href={l.href} {...(l.external ? { target: "_blank", rel: "noopener noreferrer" } : {})} className="text-sm font-medium text-navy hover:text-gold transition-colors">{l.label}</a>
           ))}
           <a href="#pricing" className="btn-gold text-[12px] py-2.5 px-5">Apply Now</a>
         </div>
@@ -75,6 +76,7 @@ const Navbar = () => {
             <a
               key={l.href}
               href={l.href}
+              {...(l.external ? { target: "_blank", rel: "noopener noreferrer" } : {})}
               onClick={() => setMenuOpen(false)}
               className="text-[16px] font-medium text-navy hover:text-gold transition-colors py-3 border-b border-ivory-mid"
             >
