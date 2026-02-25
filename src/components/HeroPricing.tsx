@@ -58,7 +58,7 @@ const HeroPricing = () => {
     <div className="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto items-start">
       {plans.map((plan) =>
       <div
-        key={plan.key} className={`relative rounded-xl p-6 ${plan.popular ? "bg-gold shadow-lg scale-[1.03]" : "bg-white shadow-md"}`}>
+        key={plan.key} className="relative rounded-xl p-6 bg-white shadow-md">
 
 
 
@@ -89,21 +89,11 @@ const HeroPricing = () => {
 
           })}
           </ul>
-          {plan.popular ?
-        <button
-          onClick={() => navigate(`/apply?plan=${plan.key}`)}
-          className="w-full bg-navy text-white font-semibold py-3 rounded text-sm uppercase tracking-wider hover:bg-gold hover:text-navy transition-all duration-300">
-
-              Get Started →
-            </button> :
-
-        <button
-          onClick={() => navigate(`/apply?plan=${plan.key}`)}
-          className="w-full border border-navy/30 text-navy font-semibold py-3 rounded text-sm uppercase tracking-wider hover:bg-navy hover:text-white transition-all duration-300">
-
+          <button
+            onClick={() => navigate(`/apply?plan=${plan.key}`)}
+            className="w-full bg-navy text-white font-semibold py-3 rounded text-sm uppercase tracking-wider hover:bg-gold hover:text-navy transition-all duration-300">
               Get Started →
             </button>
-        }
         </div>
       )}
 
