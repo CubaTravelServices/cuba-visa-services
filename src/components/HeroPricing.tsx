@@ -58,7 +58,7 @@ const HeroPricing = () => {
     <div className="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto items-start">
       {plans.map((plan) =>
       <div
-        key={plan.key} className="">
+        key={plan.key} className={`relative rounded-xl p-6 ${plan.popular ? "bg-gold shadow-lg scale-[1.03]" : "bg-white shadow-md"}`}>
 
 
 
@@ -70,20 +70,20 @@ const HeroPricing = () => {
               ★ Most Popular
             </span>
         }
-          <h3 className={`font-display text-[22px] font-bold ${plan.popular ? "text-navy" : "text-white"}`}>{plan.name}</h3>
-          <p className={`text-[13px] min-h-[38px] mt-1 ${plan.popular ? "text-slate-brand" : "text-white/50"}`}>{plan.tagline}</p>
+          <h3 className="font-display text-[22px] font-bold text-navy">{plan.name}</h3>
+          <p className="text-[13px] min-h-[38px] mt-1 text-slate-brand">{plan.tagline}</p>
           <div className="mt-4 mb-1">
-            <span className={`font-display text-[52px] font-bold ${plan.popular ? "text-navy" : "text-white"}`}>${plan.price}</span>
-            <span className={`text-[13px] ml-2 ${plan.popular ? "text-slate-brand" : "text-white/40"}`}>per traveler</span>
+            <span className="font-display text-[52px] font-bold text-navy">${plan.price}</span>
+            <span className="text-[13px] ml-2 text-slate-brand">per traveler</span>
           </div>
-          <hr className={`my-4 ${plan.popular ? "border-ivory-mid" : "border-white/10"}`} />
+          <hr className="my-4 border-ivory-mid" />
           <ul className="space-y-2.5 mb-6">
             {plan.features.map((f, i) => {
             const text = typeof f === "string" ? f : f.text;
             const bold = typeof f !== "string" && f.bold;
             const italic = typeof f !== "string" && (f as any).italic;
             return (
-              <li key={i} className={`text-sm flex items-start gap-2 ${plan.popular ? "text-navy" : "text-white/70"} ${bold ? "font-semibold" : ""} ${italic ? "italic text-[13px] opacity-70" : ""}`}>
+              <li key={i} className={`text-sm flex items-start gap-2 text-navy ${bold ? "font-semibold" : ""} ${italic ? "italic text-[13px] opacity-70" : ""}`}>
                   <span className="text-gold mt-0.5">✓</span> {text}
                 </li>);
 
@@ -99,7 +99,7 @@ const HeroPricing = () => {
 
         <button
           onClick={() => navigate(`/apply?plan=${plan.key}`)}
-          className="w-full border border-gold/40 text-gold font-semibold py-3 rounded text-sm uppercase tracking-wider hover:bg-gold/10 transition-all duration-300">
+          className="w-full border border-navy/30 text-navy font-semibold py-3 rounded text-sm uppercase tracking-wider hover:bg-navy hover:text-white transition-all duration-300">
 
               Get Started →
             </button>
