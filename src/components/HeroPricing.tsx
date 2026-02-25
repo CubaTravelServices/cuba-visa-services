@@ -21,12 +21,10 @@ const plans = [
   tagline: "As fast as 10 minutes — ideal for last-minute plans",
   price: 135,
   features: [
-  "Single-Entry Cuba E-Visa",
-  "Valid for 90 Days from Issuance",
-  { text: "⚡ Priority Email Delivery — ~10 min", bold: true },
-  "Document Review Included",
+  { text: "Includes Everything From Standard Package Plus:", italic: true },
   "Priority Customer Support",
-  { text: "D'Viajeros Form Assistance Included", bold: true }],
+  { text: "⚡ 15 Minute Application Processing", bold: true },
+  { text: "D'Viajeros Assistance Included", bold: true }],
 
   popular: true
 },
