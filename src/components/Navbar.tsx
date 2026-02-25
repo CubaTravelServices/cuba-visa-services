@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import logo from "@/assets/logo.svg";
 import { Menu, X } from "lucide-react";
 
 const navLinks = [
@@ -31,8 +32,8 @@ const Navbar = () => {
       <nav
         className={`sticky top-0 z-50 h-[68px] flex items-center justify-between px-[6%] bg-burgundy backdrop-blur-xl border-b border-gold/20 transition-shadow duration-300 ${scrolled ? "shadow-lg shadow-navy/5" : ""}`}
       >
-        <a href="#" className="font-display text-2xl font-bold text-white">
-          Cuba<span className="text-gold">Visa</span>Services
+        <a href="/" className="shrink-0">
+          <img src={logo} alt="Cuba Visa Services" className="h-10" />
         </a>
 
         {/* Desktop nav */}
@@ -64,9 +65,7 @@ const Navbar = () => {
         className={`fixed top-0 right-0 z-[70] h-full w-[280px] bg-ivory shadow-2xl transition-transform duration-300 ease-out md:hidden ${menuOpen ? "translate-x-0" : "translate-x-full"}`}
       >
         <div className="flex items-center justify-between px-6 h-[68px] border-b border-gold/20">
-          <span className="font-display text-xl font-bold text-navy">
-            Cuba<span className="text-gold">Visa</span>Services
-          </span>
+          <img src={logo} alt="Cuba Visa Services" className="h-8" />
           <button onClick={() => setMenuOpen(false)} aria-label="Close menu" className="text-navy">
             <X size={24} />
           </button>
