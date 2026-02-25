@@ -26,7 +26,7 @@ const steps = [
   },
   {
     num: "05",
-    title: "Receive Your E-Visa Instantly",
+    title: "15 Minute Application Process",
     desc: "Your Cuba e-visa arrives by email immediately (Express & Signature) or same-day (Standard). Print it or present it digitally at the airport.",
   },
   {
