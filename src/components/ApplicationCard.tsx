@@ -1,11 +1,17 @@
 import { useState } from "react";
+import { Checkbox } from "@/components/ui/checkbox";
+
+const BASE_PRICE = 85;
 
 const ApplicationCard = () => {
   const [nationality, setNationality] = useState("US Citizen");
   const [category, setCategory] = useState("Support for the Cuban People");
   const [date, setDate] = useState("");
   const [airline, setAirline] = useState("American Airlines");
-  const [dviajeros, setDviajeros] = useState("no");
+  const [addDviajeros, setAddDviajeros] = useState(false);
+  const [addExpress, setAddExpress] = useState(false);
+
+  const total = BASE_PRICE + (addDviajeros ? 25 : 0) + (addExpress ? 25 : 0);
 
   const selectClass = "w-full bg-ivory border border-ivory-mid rounded px-3 py-2.5 text-sm text-navy focus:outline-none focus:border-gold transition-colors";
   const labelClass = "block text-[11px] font-semibold uppercase tracking-[0.08em] text-slate-brand mb-1.5";
@@ -40,17 +46,46 @@ const ApplicationCard = () => {
             <option>American Airlines</option><option>Delta</option><option>Southwest</option><option>JetBlue</option><option>Other</option>
           </select>
         </div>
+
+        {/* Add-ons */}
         <div>
-          <label className={labelClass}>D'Viajeros Add-On</label>
-          <select className={selectClass} value={dviajeros} onChange={e => setDviajeros(e.target.value)}>
-            <option value="yes">Yes, include assistance (+$15)</option>
-            <option value="no">No, I'll complete it myself</option>
-          </select>
+          <label className={labelClass}>Add-Ons</label>
+          <div className="space-y-3 bg-ivory border border-ivory-mid rounded p-4">
+            <label className="flex items-start gap-3 cursor-pointer">
+              <Checkbox
+                checked={addDviajeros}
+                onCheckedChange={(checked) => setAddDviajeros(checked === true)}
+                className="mt-0.5"
+              />
+              <div className="flex-1">
+                <div className="flex items-center justify-between">
+                  <span className="text-sm font-semibold text-navy">D'Viajeros Assistance</span>
+                  <span className="text-sm font-bold text-gold">+$25.00</span>
+                </div>
+                <p className="text-[12px] text-slate-brand mt-0.5">We complete Cuba's mandatory health & customs form for you</p>
+              </div>
+            </label>
+            <hr className="border-ivory-mid" />
+            <label className="flex items-start gap-3 cursor-pointer">
+              <Checkbox
+                checked={addExpress}
+                onCheckedChange={(checked) => setAddExpress(checked === true)}
+                className="mt-0.5"
+              />
+              <div className="flex-1">
+                <div className="flex items-center justify-between">
+                  <span className="text-sm font-semibold text-navy">Express Application Processing</span>
+                  <span className="text-sm font-bold text-gold">+$25.00</span>
+                </div>
+                <p className="text-[12px] text-slate-brand mt-0.5">Priority processing — e-visa delivered in ~15 minutes</p>
+              </div>
+            </label>
+          </div>
         </div>
       </div>
 
       <div className="flex items-baseline justify-between mt-6 mb-4">
-        <span className="font-display text-[28px] font-bold text-navy">${dviajeros === "yes" ? "100" : "85"}</span>
+        <span className="font-display text-[28px] font-bold text-navy">${total}</span>
         <span className="text-sm text-slate-brand">per traveler</span>
       </div>
 
