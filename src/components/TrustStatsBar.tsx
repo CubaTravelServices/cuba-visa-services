@@ -4,7 +4,7 @@ const stats = [
   { icon: "🏛️", value: "Direct", desc: "Cuban Consulate contract — the only consumer provider with this agreement" },
   { icon: "✈️", value: "100%", desc: "US airlines operating Cuba routes covered under service agreements" },
   { icon: "⚡", value: "Instant", desc: "E-visa delivered to your inbox immediately after application" },
-  { icon: "🎖️", value: "15 Yrs", desc: "IATA accredited · OFAC authorized · Florida Seller of Travel" },
+  { icon: "🎖️", value: "28 Yrs", desc: "IATA accredited · OFAC authorized · Florida Seller of Travel" },
 ];
 
 const TrustStatsBar = () => {
