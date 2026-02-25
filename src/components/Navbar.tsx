@@ -3,7 +3,7 @@ import { Menu, X } from "lucide-react";
 
 const navLinks = [
   { label: "Services", href: "#services" },
-  { label: "What's the Process", href: "/process" },
+  { label: "Application Process", href: "/process" },
   { label: "Airport Locations", href: "#airports" },
   { label: "Blog", href: "/blog" },
   { label: "Travel Services", href: "https://CubaTravelServices.com", external: true },
