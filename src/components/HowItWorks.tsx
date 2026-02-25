@@ -1,0 +1,34 @@
+import { useScrollAnimation } from "@/hooks/useScrollAnimation";
+
+const steps = [
+  { num: "01", title: "Choose Your Service", desc: "Select your OFAC travel category, travel dates, and D'Viajeros option" },
+  { num: "02", title: "Complete Application", desc: "Fill in passport details. Pre-validated against Cuban consulate requirements." },
+  { num: "03", title: "Secure Payment", desc: "Pay by credit card — US cards work here unlike evisacuba.cu" },
+  { num: "04", title: "Receive Instantly", desc: "E-visa arrives by email immediately. Print or present digitally." },
+];
+
+const HowItWorks = () => {
+  const ref = useScrollAnimation();
+  return (
+    <section id="how-it-works" className="bg-white section-padding" ref={ref}>
+      <div className="text-center mb-12">
+        <p className="eyebrow">Simple Process</p>
+        <h2 className="font-display text-4xl lg:text-5xl font-bold text-navy">Your Cuba E-Visa in 4 Steps</h2>
+      </div>
+      <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
+        {steps.map((s, i) => (
+          <div key={s.num} className="relative bg-ivory border border-ivory-mid rounded-lg p-7 card-hover animate-on-scroll">
+            <div className="font-display text-[52px] font-bold text-gold/20 leading-none mb-2">{s.num}</div>
+            <h3 className="font-display text-xl font-bold text-navy mb-2">{s.title}</h3>
+            <p className="text-sm text-slate-brand leading-relaxed">{s.desc}</p>
+            {i < 3 && (
+              <span className="hidden lg:block absolute -right-4 top-1/2 -translate-y-1/2 text-gold text-xl">→</span>
+            )}
+          </div>
+        ))}
+      </div>
+    </section>
+  );
+};
+
+export default HowItWorks;
