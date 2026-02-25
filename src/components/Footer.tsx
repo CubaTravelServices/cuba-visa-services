@@ -29,9 +29,9 @@ const Footer = () =>
         </div>
     )}
     </div>
-    <div className="border-t border-white/[0.07] pt-6 text-center text-[12px]">
-      © 2026 Cuba Visa Services. All rights reserved. · IATA Accredited · OFAC Authorized · Florida Seller of Travel · Not affiliated with the Cuban Government.
-    </div>
+    <div className="border-t border-white/[0.07] pt-6 text-center text-[12px]">© 2026 Cuba Travel Services. All rights reserved. · IATA Accredited · OFAC Authorized · Florida Seller of Travel · Not affiliated with the Cuban Government.
+
+  </div>
   </footer>;
 
 
