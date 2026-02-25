@@ -5,6 +5,7 @@ const navLinks = [
   { label: "Services", href: "#services" },
   { label: "Pricing", href: "#pricing" },
   { label: "Airport Offices", href: "#airports" },
+  { label: "Blog", href: "/blog" },
   { label: "Travel Services", href: "https://CubaTravelServices.com", external: true },
   { label: "FAQ", href: "#faq" },
 ];
