@@ -57,6 +57,10 @@
     --sidebar-accent-foreground: 240 5.9% 10%;
     --sidebar-border: 220 13% 91%;
     --sidebar-ring: 217.2 91.2% 59.8%;
+
+    /* Navigation accent */
+    --burgundy: 350 40% 18%;
+    --burgundy-light: 350 35% 25%;
   }
 }
 
@@ -142,4 +146,7 @@
   .border-ivory-mid { border-color: hsl(var(--ivory-mid)); }
   .font-display { font-family: var(--font-display); }
   .font-body { font-family: var(--font-body); }
+  .bg-burgundy { background-color: hsl(var(--burgundy)); }
+  .text-burgundy { color: hsl(var(--burgundy)); }
+  .bg-burgundy-light { background-color: hsl(var(--burgundy-light)); }
 }

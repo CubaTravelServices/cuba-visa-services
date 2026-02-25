@@ -29,23 +29,23 @@ const Navbar = () => {
   return (
     <>
       <nav
-        className={`sticky top-0 z-50 h-[68px] flex items-center justify-between px-[6%] bg-ivory/[0.97] backdrop-blur-xl border-b border-gold/20 transition-shadow duration-300 ${scrolled ? "shadow-lg shadow-navy/5" : ""}`}
+        className={`sticky top-0 z-50 h-[68px] flex items-center justify-between px-[6%] bg-burgundy backdrop-blur-xl border-b border-gold/20 transition-shadow duration-300 ${scrolled ? "shadow-lg shadow-navy/5" : ""}`}
       >
-        <a href="#" className="font-display text-2xl font-bold text-navy">
+        <a href="#" className="font-display text-2xl font-bold text-white">
           Cuba<span className="text-gold">Visa</span>Services
         </a>
 
         {/* Desktop nav */}
         <div className="hidden md:flex items-center gap-9">
           {navLinks.map((l) => (
-            <a key={l.href} href={l.href} {...(l.external ? { target: "_blank", rel: "noopener noreferrer" } : {})} className="text-sm font-medium text-navy hover:text-gold transition-colors">{l.label}</a>
+            <a key={l.href} href={l.href} {...(l.external ? { target: "_blank", rel: "noopener noreferrer" } : {})} className="text-sm font-medium text-white/80 hover:text-gold transition-colors">{l.label}</a>
           ))}
           <a href="#pricing" className="btn-gold text-[12px] py-2.5 px-5">Apply Now</a>
         </div>
 
         {/* Mobile hamburger */}
         <button
-          className="md:hidden flex items-center justify-center w-10 h-10 text-navy"
+          className="md:hidden flex items-center justify-center w-10 h-10 text-white"
           onClick={() => setMenuOpen(true)}
           aria-label="Open menu"
         >
