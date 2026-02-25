@@ -14,7 +14,7 @@ const HeroSection = () => (
       {/* Top hero text */}
       <div className="text-center max-w-3xl mx-auto mb-12">
         <span className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-gold/30 bg-gold/[0.12] text-gold-light text-[12px] font-semibold uppercase tracking-wider mb-6">
-          ★ America's #1 Authorized Cuba E-Visa Provider Since 2009
+          ★ America's #1 Authorized Cuba E-Visa Provider Since 1999
         </span>
         <h1 className="font-display text-[clamp(38px,5vw,62px)] font-bold text-white leading-[1.1] mb-6">
           Cuba E-Visa for <em className="text-gold-light italic">US Citizens</em> — Instant Delivery
