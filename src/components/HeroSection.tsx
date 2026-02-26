@@ -2,7 +2,7 @@ import havanaHero from "@/assets/havana-hero.jpg";
 import consularService from "@/assets/consular-service.jpg";
 import HeroPricing from "./HeroPricing";
 
-const HeroSection = () => (
+const HeroSection = () =>
 <section className="bg-navy relative overflow-hidden">
     <div
     className="absolute inset-0 bg-cover bg-center opacity-20"
@@ -16,7 +16,7 @@ const HeroSection = () => (
         <span className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-gold/30 bg-gold/[0.12] text-gold-light text-[12px] font-semibold uppercase tracking-wider mb-6">
           ★ America's #1 Authorized Cuba E-Visa Provider Since 1999
         </span>
-        <h1 className="font-display text-[clamp(38px,5vw,62px)] font-bold text-white leading-[1.1] mb-6">Cuba E-Visa for US Originating Travelers. Express Application Processing</h1>
+        <h1 className="font-display text-[clamp(38px,5vw,62px)] font-bold text-white leading-[1.1] mb-6">The Official Cuba E-Visa Provider</h1>
         <p className="text-[17px] text-white/70 max-w-xl mx-auto leading-relaxed">
           The only authorized provider with a direct Cuban Consulate contract, service agreements with every US airline flying to Cuba, and physical staff at departure airports.
         </p>
@@ -49,8 +49,8 @@ const HeroSection = () => (
         </div>
       </div>
     </div>
-  </section>
-);
+  </section>;
+
 
 
 export default HeroSection;
