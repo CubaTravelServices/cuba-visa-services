@@ -2,9 +2,10 @@ import { Sheet, SheetContent, SheetHeader, SheetTitle } from "@/components/ui/sh
 import { useCart, itemTotal, ADD_ON_PRICES } from "@/contexts/CartContext";
 import { Minus, Plus, Trash2, ShoppingBag } from "lucide-react";
 import { useNavigate } from "react-router-dom";
+import { Switch } from "@/components/ui/switch";
 
 const CartDrawer = () => {
-  const { items, removeItem, updateTravelers, cartTotal, isDrawerOpen, setDrawerOpen } = useCart();
+  const { items, removeItem, updateTravelers, toggleAddOn, cartTotal, isDrawerOpen, setDrawerOpen } = useCart();
   const navigate = useNavigate();
 
   return (
@@ -36,13 +37,31 @@ const CartDrawer = () => {
                     </button>
                   </div>
 
-                  {/* Add-ons */}
-                  {item.addOns.dviajeros && (
-                    <p className="text-xs text-gold font-medium">+ D'Viajeros Assistance (+${ADD_ON_PRICES.dviajeros})</p>
-                  )}
-                  {item.addOns.expressProcessing && (
-                    <p className="text-xs text-gold font-medium">+ Express Processing (+${ADD_ON_PRICES.expressProcessing})</p>
-                  )}
+                  {/* Upsell Add-ons */}
+                  <div className="space-y-2 mt-3 pt-3 border-t border-ivory-mid">
+                    <div className="flex items-center justify-between">
+                      <div>
+                        <p className="text-xs font-semibold text-navy">D'Viajeros Assistance</p>
+                        <p className="text-[10px] text-slate-brand">+${ADD_ON_PRICES.dviajeros}/traveler</p>
+                      </div>
+                      <Switch
+                        checked={item.addOns.dviajeros}
+                        onCheckedChange={() => toggleAddOn(item.id, "dviajeros")}
+                        className="data-[state=checked]:bg-gold"
+                      />
+                    </div>
+                    <div className="flex items-center justify-between">
+                      <div>
+                        <p className="text-xs font-semibold text-navy">Express Processing</p>
+                        <p className="text-[10px] text-slate-brand">As fast as 15 min · +${ADD_ON_PRICES.expressProcessing}/traveler</p>
+                      </div>
+                      <Switch
+                        checked={item.addOns.expressProcessing}
+                        onCheckedChange={() => toggleAddOn(item.id, "expressProcessing")}
+                        className="data-[state=checked]:bg-gold"
+                      />
+                    </div>
+                  </div>
 
                   {/* Travelers */}
                   <div className="flex items-center justify-between mt-3 pt-3 border-t border-ivory-mid">
