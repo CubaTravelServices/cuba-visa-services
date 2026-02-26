@@ -7,6 +7,7 @@ const PACKAGES = [
     key: "standard",
     name: "Standard Cuba E-Visa",
     price: 85,
+    badge: null as string | null,
     features: [
       "Single-Entry Cuba E-Visa",
       "Valid for 90 Days from Issuance",
@@ -19,6 +20,7 @@ const PACKAGES = [
     key: "express",
     name: "Express Cuba E-Visa",
     price: 135,
+    badge: "⭐ Most Popular",
     features: [
       "Everything in Standard, plus:",
       "Priority Customer Support",
@@ -30,6 +32,7 @@ const PACKAGES = [
     key: "signature",
     name: "Signature Service Cuba E-Visa",
     price: 225,
+    badge: null as string | null,
     features: [
       "Everything in Express, plus:",
       "VIP Immigration Processing on Arrival",
@@ -74,10 +77,15 @@ const ApplicationCard = () => {
           >
             {PACKAGES.map((pkg) => (
               <option key={pkg.key} value={pkg.key}>
-                {pkg.name} — ${pkg.price}
+                {pkg.name} — ${pkg.price}{pkg.badge ? ` (${pkg.badge})` : ""}
               </option>
             ))}
           </select>
+          {PACKAGES.find((p) => p.key === selectedPackage)?.badge && (
+            <span className="inline-block mt-1.5 text-[11px] font-semibold bg-gold/15 text-gold px-2.5 py-0.5 rounded-full">
+              {PACKAGES.find((p) => p.key === selectedPackage)?.badge}
+            </span>
+          )}
           {/* Package features */}
           <div className="bg-ivory border border-ivory-mid rounded p-4 mt-2">
             <ul className="space-y-1.5">
