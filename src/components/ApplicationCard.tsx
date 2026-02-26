@@ -113,7 +113,8 @@ const ApplicationCard = () => {
           </select>
         </div>
 
-        {/* Add-ons */}
+        {/* Add-ons — only for Standard */}
+        {selectedPackage === "standard" && (
         <div>
           <label className={labelClass}>Add-Ons</label>
           <div className="space-y-3 bg-ivory border border-ivory-mid rounded p-4">
@@ -148,6 +149,7 @@ const ApplicationCard = () => {
             </label>
           </div>
         </div>
+        )}
       </div>
 
       <div className="flex items-baseline justify-between mt-6 mb-4">
