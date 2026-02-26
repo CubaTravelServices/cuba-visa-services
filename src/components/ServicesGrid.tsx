@@ -5,7 +5,7 @@ const services = [
   { icon: "📝", name: "D'Viajeros Form", desc: "Cuba's mandatory digital health and customs declaration. Completed correctly for you.", price: "From $25" },
   { icon: "💼", name: "Cuba Business Visa", desc: "Business travel requires proper OFAC documentation and consulate authorization.", price: "Contact for pricing" },
   { icon: "", name: "Religious Visa", desc: "Processing official religious visa", price: "From $175" },
-  { icon: "🛂", name: "Cuban Passport Renewal", desc: "Cuban-born US citizens: renew your Cuban passport through our authorized consular services.", price: "From $150" },
+  { icon: "🛂", name: "Cuban Passport Renewal", desc: "Cuban-born US citizens: renew your Cuban passport through our authorized consular services.", price: "From $250.00" },
   { icon: "📄", name: "Cuban Birth Certificate & Consular", desc: "Certified documents, powers of attorney, official consular services for Cuban nationals in the US.", price: "From $100" },
 ];
 
