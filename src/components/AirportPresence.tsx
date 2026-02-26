@@ -12,7 +12,7 @@ const AirportPresence = () => {
     <section id="airports" className="bg-ivory section-padding" ref={ref}>
       <div className="text-center mb-12">
         <p className="eyebrow">Airport Offices</p>
-        <h2 className="font-display text-4xl lg:text-5xl font-bold text-navy">Physical Presence Where It Matters</h2>
+        <h2 className="font-display text-4xl lg:text-5xl font-bold text-navy">Exclusive Airport Presence At:</h2>
       </div>
       <div className="grid md:grid-cols-3 gap-6 max-w-6xl mx-auto">
         {airports.map((a) => (
