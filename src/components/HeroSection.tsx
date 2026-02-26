@@ -2,7 +2,7 @@ import havanaHero from "@/assets/havana-hero.jpg";
 import consularService from "@/assets/consular-service.jpg";
 import HeroPricing from "./HeroPricing";
 
-const HeroSection = () =>
+const HeroSection = () => (
 <section className="bg-navy relative overflow-hidden">
     <div
     className="absolute inset-0 bg-cover bg-center opacity-20"
@@ -49,7 +49,8 @@ const HeroSection = () =>
         </div>
       </div>
     </div>
-  </section>;
+  </section>
+);
 
 
 export default HeroSection;
