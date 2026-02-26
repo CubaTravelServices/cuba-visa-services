@@ -1,6 +1,7 @@
 import { useState } from "react";
-import { useSearchParams } from "react-router-dom";
+import { useSearchParams, useNavigate } from "react-router-dom";
 import { Checkbox } from "@/components/ui/checkbox";
+import { useCart } from "@/contexts/CartContext";
 
 const PACKAGES = [
   {
@@ -45,6 +46,8 @@ const PACKAGES = [
 
 const ApplicationCard = () => {
   const [searchParams] = useSearchParams();
+  const navigate = useNavigate();
+  const { addItem } = useCart();
   const initialPlan = searchParams.get("plan") || "standard";
   const [selectedPackage, setSelectedPackage] = useState(initialPlan);
   const [nationality, setNationality] = useState("US Citizen");
@@ -165,7 +168,23 @@ const ApplicationCard = () => {
         <span className="text-sm text-slate-brand">per traveler</span>
       </div>
 
-      <button className="w-full bg-navy text-white font-semibold py-3.5 rounded text-sm uppercase tracking-wider hover:bg-gold hover:text-navy transition-all duration-300">
+      <button
+        onClick={() => {
+          const pkg = PACKAGES.find((p) => p.key === selectedPackage)!;
+          addItem({
+            packageKey: pkg.key as "standard" | "express" | "signature",
+            packageName: pkg.name,
+            basePrice: pkg.price,
+            addOns: {
+              dviajeros: selectedPackage === "standard" ? addDviajeros : false,
+              expressProcessing: selectedPackage === "standard" ? addExpress : false,
+            },
+            travelers: 1,
+          });
+          navigate("/checkout");
+        }}
+        className="w-full bg-navy text-white font-semibold py-3.5 rounded text-sm uppercase tracking-wider hover:bg-gold hover:text-navy transition-all duration-300"
+      >
         Continue to Application →
       </button>
 
