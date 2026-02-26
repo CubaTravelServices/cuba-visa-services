@@ -9,7 +9,7 @@ const CtaSection = () =>
       Join 500,000+ travelers who trusted us with their Cuba e-visa. Instant delivery, direct consulate authorization, airport support.
     </p>
     <div className="flex flex-wrap justify-center gap-4">
-      <a href="#pricing" className="btn-gold">Apply for Cuba E-Visa Now →</a>
+      <a href="/apply?plan=standard" className="btn-gold">Apply for Cuba E-Visa Now →</a>
       <a href="#" className="btn-ghost">📞 Speak to Our Team</a>
     </div>
   </section>;
