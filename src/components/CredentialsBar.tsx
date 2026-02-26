@@ -10,7 +10,7 @@ const CredentialsBar = () => (
   <section className="bg-navy-mid section-padding">
     <div className="flex flex-col lg:flex-row items-center justify-between gap-8 max-w-6xl mx-auto">
       <h2 className="font-display text-[26px] text-white text-center lg:text-left">
-        Authorized, Accredited, and <em className="text-gold-light italic">Accountable</em> — since 2009
+        Authorized, Accredited, and <em className="text-gold-light italic">Accountable</em> — since 1999
       </h2>
       <div className="flex flex-wrap justify-center gap-3">
         {badges.map((b) => (
