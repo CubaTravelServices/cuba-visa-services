@@ -62,18 +62,7 @@ const ApplicationCard = () => {
       <div className="flex items-center justify-between mb-6">
         <h3 className="font-display text-[22px] font-bold text-navy">Apply for Cuba E-Visa</h3>
         <span className="text-xs font-semibold bg-emerald-50 text-emerald-700 px-3 py-1 rounded-full">⚡ Instant Delivery</span>
-        </div>
-        {/* Package features */}
-        <div className="bg-ivory border border-ivory-mid rounded p-4">
-          <ul className="space-y-1.5">
-            {PACKAGES.find((p) => p.key === selectedPackage)?.features.map((f, i) => (
-              <li key={i} className={`text-[13px] flex items-start gap-2 ${i === 0 && selectedPackage !== "standard" ? "text-slate-brand italic" : "text-navy"}`}>
-                <span className="text-gold mt-0.5">✓</span>
-                <span>{f}</span>
-              </li>
-            ))}
-          </ul>
-        </div>
+      </div>
 
       <div className="space-y-4">
         <div>
@@ -89,6 +78,17 @@ const ApplicationCard = () => {
               </option>
             ))}
           </select>
+          {/* Package features */}
+          <div className="bg-ivory border border-ivory-mid rounded p-4 mt-2">
+            <ul className="space-y-1.5">
+              {PACKAGES.find((p) => p.key === selectedPackage)?.features.map((f, i) => (
+                <li key={i} className={`text-[13px] flex items-start gap-2 ${i === 0 && selectedPackage !== "standard" ? "text-slate-brand italic" : "text-navy"}`}>
+                  <span className="text-gold mt-0.5">✓</span>
+                  <span>{f}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
         </div>
         <div>
           <label className={labelClass}>Nationality</label>
