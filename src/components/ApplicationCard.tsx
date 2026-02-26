@@ -3,9 +3,41 @@ import { useSearchParams } from "react-router-dom";
 import { Checkbox } from "@/components/ui/checkbox";
 
 const PACKAGES = [
-  { key: "standard", name: "Standard Cuba E-Visa", price: 85 },
-  { key: "express", name: "Express Cuba E-Visa", price: 135 },
-  { key: "signature", name: "Signature Service Cuba E-Visa", price: 225 },
+  {
+    key: "standard",
+    name: "Standard Cuba E-Visa",
+    price: 85,
+    features: [
+      "Single-Entry Cuba E-Visa",
+      "Valid for 90 Days from Issuance",
+      "Email Delivery",
+      "Document Review Included",
+      "Standard Customer Support",
+    ],
+  },
+  {
+    key: "express",
+    name: "Express Cuba E-Visa",
+    price: 135,
+    features: [
+      "Everything in Standard, plus:",
+      "Priority Customer Support",
+      "15 Minute Application Processing",
+      "D'Viajeros Assistance Included",
+    ],
+  },
+  {
+    key: "signature",
+    name: "Signature Service Cuba E-Visa",
+    price: 225,
+    features: [
+      "Everything in Express, plus:",
+      "VIP Immigration Processing on Arrival",
+      "VIP Departure Lounge Access",
+      "VIP Transfer to City Center",
+      "Meet & Greet at Airport",
+    ],
+  },
 ];
 
 const ApplicationCard = () => {
@@ -30,7 +62,18 @@ const ApplicationCard = () => {
       <div className="flex items-center justify-between mb-6">
         <h3 className="font-display text-[22px] font-bold text-navy">Apply for Cuba E-Visa</h3>
         <span className="text-xs font-semibold bg-emerald-50 text-emerald-700 px-3 py-1 rounded-full">⚡ Instant Delivery</span>
-      </div>
+        </div>
+        {/* Package features */}
+        <div className="bg-ivory border border-ivory-mid rounded p-4">
+          <ul className="space-y-1.5">
+            {PACKAGES.find((p) => p.key === selectedPackage)?.features.map((f, i) => (
+              <li key={i} className={`text-[13px] flex items-start gap-2 ${i === 0 && selectedPackage !== "standard" ? "text-slate-brand italic" : "text-navy"}`}>
+                <span className="text-gold mt-0.5">✓</span>
+                <span>{f}</span>
+              </li>
+            ))}
+          </ul>
+        </div>
 
       <div className="space-y-4">
         <div>
