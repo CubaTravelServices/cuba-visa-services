@@ -6,9 +6,11 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Index from "./pages/Index";
 import Apply from "./pages/Apply";
 import Process from "./pages/Process";
+import Checkout from "./pages/Checkout";
 import BlogListing from "./pages/BlogListing";
 import BlogPost from "./pages/BlogPost";
 import NotFound from "./pages/NotFound";
+import { CartProvider } from "./contexts/CartContext";
 
 const queryClient = new QueryClient();
 
@@ -18,15 +20,18 @@ const App = () => (
       <Toaster />
       <Sonner />
       <BrowserRouter>
-        <Routes>
-          <Route path="/" element={<Index />} />
-          <Route path="/apply" element={<Apply />} />
-          <Route path="/process" element={<Process />} />
-          <Route path="/blog" element={<BlogListing />} />
-          <Route path="/blog/:slug" element={<BlogPost />} />
-          {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
-          <Route path="*" element={<NotFound />} />
-        </Routes>
+        <CartProvider>
+          <Routes>
+            <Route path="/" element={<Index />} />
+            <Route path="/apply" element={<Apply />} />
+            <Route path="/process" element={<Process />} />
+            <Route path="/checkout" element={<Checkout />} />
+            <Route path="/blog" element={<BlogListing />} />
+            <Route path="/blog/:slug" element={<BlogPost />} />
+            {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
+            <Route path="*" element={<NotFound />} />
+          </Routes>
+        </CartProvider>
       </BrowserRouter>
     </TooltipProvider>
   </QueryClientProvider>

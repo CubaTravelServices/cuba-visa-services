@@ -1,4 +1,5 @@
 import { useNavigate } from "react-router-dom";
+import { useCart } from "@/contexts/CartContext";
 
 const plans = [
 {
@@ -46,6 +47,17 @@ const plans = [
 
 const HeroPricing = () => {
   const navigate = useNavigate();
+  const { addItem } = useCart();
+
+  const handleGetStarted = (plan: typeof plans[0]) => {
+    addItem({
+      packageKey: plan.key as "standard" | "express" | "signature",
+      packageName: plan.name,
+      basePrice: plan.price,
+      addOns: { dviajeros: plan.key !== "standard", expressProcessing: false },
+      travelers: 1,
+    });
+  };
 
   return (
     <div className="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto items-start">
@@ -83,9 +95,9 @@ const HeroPricing = () => {
           })}
           </ul>
           <button
-            onClick={() => navigate(`/apply?plan=${plan.key}`)}
+            onClick={() => handleGetStarted(plan)}
             className="w-full bg-navy text-white font-semibold py-3 rounded text-sm uppercase tracking-wider hover:bg-gold hover:text-navy transition-all duration-300">
-              Get Started →
+              Add to Cart →
             </button>
         </div>
       )}

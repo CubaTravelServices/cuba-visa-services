@@ -1,6 +1,8 @@
 import { useState, useEffect } from "react";
 import logo from "@/assets/logo.svg";
-import { Menu, X } from "lucide-react";
+import { Menu, X, ShoppingBag } from "lucide-react";
+import { useCart } from "@/contexts/CartContext";
+import CartDrawer from "@/components/CartDrawer";
 
 const navLinks = [
   { label: "Services", href: "#services" },
@@ -14,6 +16,7 @@ const navLinks = [
 const Navbar = () => {
   const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
+  const { itemCount, setDrawerOpen } = useCart();
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 10);
@@ -42,6 +45,12 @@ const Navbar = () => {
             <a key={l.href} href={l.href} {...(l.external ? { target: "_blank", rel: "noopener noreferrer" } : {})} className="text-sm font-medium text-white/80 hover:text-gold transition-colors">{l.label}</a>
           ))}
           <a href="/apply?plan=standard" className="btn-gold text-[12px] py-2.5 px-5">Apply Now</a>
+          <button onClick={() => setDrawerOpen(true)} className="relative text-white/80 hover:text-gold transition-colors" aria-label="Open cart">
+            <ShoppingBag className="h-5 w-5" />
+            {itemCount > 0 && (
+              <span className="absolute -top-2 -right-2 bg-gold text-navy text-[10px] font-bold w-5 h-5 rounded-full flex items-center justify-center">{itemCount}</span>
+            )}
+          </button>
         </div>
 
         {/* Mobile hamburger */}
@@ -92,6 +101,7 @@ const Navbar = () => {
           </a>
         </div>
       </div>
+      <CartDrawer />
     </>
   );
 };
