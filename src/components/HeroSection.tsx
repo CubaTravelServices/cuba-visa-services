@@ -16,7 +16,8 @@ const HeroSection = () =>
         <span className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-gold/30 bg-gold/[0.12] text-gold-light text-[12px] font-semibold uppercase tracking-wider mb-6">
           ★ America's #1 Authorized Cuba E-Visa Provider Since 1999
         </span>
-        <h1 className="font-display font-bold text-white leading-[1.1] mb-6 text-2xl lg:whitespace-nowrap lg:text-[clamp(28px,3.8vw,52px)]">Official Cuba E-Visa  Secure. Fast. Trusted</h1>
+        <h1 className="font-display font-bold text-white leading-[1.1] mb-6 lg:whitespace-nowrap lg:text-[clamp(28px,3.8vw,52px)] text-2xl">Official Cuba E-Visa  Provider
+Secure. Fast. Trusted</h1>
         <p className="text-[17px] text-white/70 max-w-xl mx-auto leading-relaxed">
           The only authorized provider with a direct Cuban Consulate contract, service agreements with every US airline flying to Cuba, and physical staff at departure airports.
         </p>
@@ -24,8 +25,7 @@ const HeroSection = () =>
           {[["15+", "Years in service"], ["500K+", "Visas processed"], ["3", "Airport offices"], ["~0 min", "Processing time"]].map(([num, label]) => <div key={label}>
               <div className="font-display text-[32px] font-bold text-gold-light">{num}</div>
               <div className="text-[12px] text-white/50">{label}</div>
-            </div>
-        )}
+            </div>)}
         </div>
       </div>
 
