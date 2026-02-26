@@ -35,8 +35,9 @@ const Navbar = () => {
       <nav
         className={`sticky top-0 z-50 flex items-center justify-between px-[6%] bg-burgundy backdrop-blur-xl border-b border-gold/20 transition-all duration-300 ${scrolled ? "h-[80px] shadow-lg shadow-navy/5" : "h-[140px]"}`}
       >
-        <a href="/" className="shrink-0">
-          <img src={logo} alt="Cuba Visa Services" className={`transition-all duration-300 ${scrolled ? "h-[60px]" : "h-[120px]"}`} />
+        <a href="/" className="shrink-0 flex flex-col items-center">
+          <img src={logo} alt="Cuba Visa Services" className={`transition-all duration-300 ${scrolled ? "h-[50px]" : "h-[100px]"}`} />
+          <span className={`text-white/70 font-medium tracking-wide transition-all duration-300 ${scrolled ? "text-[8px] mt-0.5" : "text-[10px] mt-1"}`}>A Cuba Travel Services Company</span>
         </a>
 
         {/* Desktop nav */}
@@ -74,7 +75,10 @@ const Navbar = () => {
         className={`fixed top-0 right-0 z-[70] h-full w-[280px] bg-ivory shadow-2xl transition-transform duration-300 ease-out md:hidden ${menuOpen ? "translate-x-0" : "translate-x-full"}`}
       >
         <div className="flex items-center justify-between px-6 h-[68px] border-b border-gold/20">
-          <img src={logo} alt="Cuba Visa Services" className="h-8" />
+          <div className="flex flex-col items-center">
+            <img src={logo} alt="Cuba Visa Services" className="h-8" />
+            <span className="text-navy/60 text-[7px] font-medium tracking-wide">A Cuba Travel Services Company</span>
+          </div>
           <button onClick={() => setMenuOpen(false)} aria-label="Close menu" className="text-navy">
             <X size={24} />
           </button>
