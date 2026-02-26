@@ -1,9 +1,17 @@
 import { useState } from "react";
+import { useSearchParams } from "react-router-dom";
 import { Checkbox } from "@/components/ui/checkbox";
 
-const BASE_PRICE = 85;
+const PACKAGES = [
+  { key: "standard", name: "Standard Cuba E-Visa", price: 85 },
+  { key: "express", name: "Express Cuba E-Visa", price: 135 },
+  { key: "signature", name: "Signature Service Cuba E-Visa", price: 225 },
+];
 
 const ApplicationCard = () => {
+  const [searchParams] = useSearchParams();
+  const initialPlan = searchParams.get("plan") || "standard";
+  const [selectedPackage, setSelectedPackage] = useState(initialPlan);
   const [nationality, setNationality] = useState("US Citizen");
   const [category, setCategory] = useState("Support for the Cuban People");
   const [date, setDate] = useState("");
@@ -11,7 +19,8 @@ const ApplicationCard = () => {
   const [addDviajeros, setAddDviajeros] = useState(false);
   const [addExpress, setAddExpress] = useState(false);
 
-  const total = BASE_PRICE + (addDviajeros ? 25 : 0) + (addExpress ? 25 : 0);
+  const basePrice = PACKAGES.find((p) => p.key === selectedPackage)?.price || 85;
+  const total = basePrice + (addDviajeros ? 25 : 0) + (addExpress ? 25 : 0);
 
   const selectClass = "w-full bg-ivory border border-ivory-mid rounded px-3 py-2.5 text-sm text-navy focus:outline-none focus:border-gold transition-colors";
   const labelClass = "block text-[11px] font-semibold uppercase tracking-[0.08em] text-slate-brand mb-1.5";
@@ -24,6 +33,20 @@ const ApplicationCard = () => {
       </div>
 
       <div className="space-y-4">
+        <div>
+          <label className={labelClass}>E-Visa Package</label>
+          <select
+            className={selectClass}
+            value={selectedPackage}
+            onChange={(e) => setSelectedPackage(e.target.value)}
+          >
+            {PACKAGES.map((pkg) => (
+              <option key={pkg.key} value={pkg.key}>
+                {pkg.name} — ${pkg.price}
+              </option>
+            ))}
+          </select>
+        </div>
         <div>
           <label className={labelClass}>Nationality</label>
           <select className={selectClass} value={nationality} onChange={e => setNationality(e.target.value)}>
