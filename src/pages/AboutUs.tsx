@@ -25,7 +25,7 @@ const AboutUs = () => (
           Cuba Travel Services was founded in 1999 with a simple mission: make travel to Cuba accessible, legal, and stress-free for Americans. Over two decades later, we've helped hundreds of thousands of travelers navigate the complexities of Cuba travel — from visa procurement to full-service travel planning.
         </p>
         <p className="text-navy/70 leading-relaxed mb-4">
-          Cuba Visa Services is our specialized visa division, operating under an exclusive contract with the Cuban Consulate in Washington, D.C. This direct relationship allows us to process visas faster and more reliably than any other provider in the United States.
+          Cuba Visa Services is our specialized visa division, operating under an exclusive contract with US Based Airlines and the Cuban Consulate in Washington, D.C. This direct relationship allows us to process visas faster and more reliably than any other provider in the United States.
         </p>
       </section>
 
