@@ -9,6 +9,7 @@ const navLinks = [
   { label: "Airport Locations", href: "#airports" },
   { label: "Visa Blog", href: "/blog" },
   { label: "Travel Services", href: "https://CubaTravelServices.com", external: true },
+  { label: "About Us", href: "https://CubaTravelServices.com/about", external: true },
   { label: "FAQ", href: "#faq" },
 ];
 
