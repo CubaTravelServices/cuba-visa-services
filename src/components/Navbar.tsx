@@ -5,10 +5,9 @@ import { useCart } from "@/contexts/CartContext";
 import CartDrawer from "@/components/CartDrawer";
 
 const navLinks = [
-  { label: "Services", href: "#services" },
   { label: "Application Process", href: "/process" },
   { label: "Airport Locations", href: "#airports" },
-  { label: "Blog", href: "/blog" },
+  { label: "Visa Blog", href: "/blog" },
   { label: "Travel Services", href: "https://CubaTravelServices.com", external: true },
   { label: "FAQ", href: "#faq" },
 ];
