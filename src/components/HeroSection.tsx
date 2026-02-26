@@ -17,7 +17,7 @@ const HeroSection = () =>
           ★ America's #1 Authorized Cuba E-Visa Provider Since 1999
         </span>
         <h1 className="font-display text-[clamp(38px,5vw,62px)] font-bold text-white leading-[1.1] mb-6">
-          Cuba E-Visa for <em className="text-gold-light italic">US Citizens</em> — Instant Delivery
+          Cuba E-Visa for <em className="text-gold-light italic">US Originating Travelers</em>. Express Application Processing
         </h1>
         <p className="text-[17px] text-white/70 max-w-xl mx-auto leading-relaxed">
           The only authorized provider with a direct Cuban Consulate contract, service agreements with every US airline flying to Cuba, and physical staff at departure airports.
