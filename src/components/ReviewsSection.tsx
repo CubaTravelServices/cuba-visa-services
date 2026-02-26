@@ -3,7 +3,7 @@ import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 const reviews = [
   { name: "Maria T.", location: "Miami, FL", text: "I applied at 10pm the night before my flight and had my e-visa in my inbox within 5 minutes. No other service comes close.", detail: "American Airlines · MIA" },
   { name: "Carlos R.", location: "Tampa, FL", text: "Their staff was literally at the American Airlines counter in Miami when I had a documentation problem. Fixed it in minutes.", detail: "Southwest Airlines · TPA" },
-  { name: "Ana L.", location: "Hialeah, FL", text: "As a Cuban-born American I've used them for my tourist visa AND my passport renewal. Only company that does both.", detail: "Delta Air Lines · MIA" },
+  { name: "Ana L.", location: "Hialeah, FL", text: "As a Cuban-born American I've used them for years for my passport renewal. Only company that can assist with my passport and provide Evisa application service at the Airport in minutes.", detail: "Delta Air Lines · MIA" },
 ];
 
 const ReviewsSection = () => {
