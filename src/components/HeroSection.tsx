@@ -19,7 +19,7 @@ const HeroSection = () =>
         <h1 className="font-display font-bold text-white leading-[1.1] mb-6 lg:whitespace-nowrap lg:text-[clamp(28px,3.8vw,52px)] text-2xl">The Official Cuba E-Visa Provider
       </h1>
         <p className="text-[17px] text-white/70 max-w-xl mx-auto leading-relaxed">
-          The only authorized provider with a direct Cuban Consulate contract, service agreements with every US airline flying to Cuba, and physical staff at departure airports.
+          The only authorized provider with a direct Cuban Consulate contract, service agreements with every US airline flying to Cuba, and physical staff at departure airports. Secure. Fast. Reliable.   
         </p>
         <div className="flex flex-wrap justify-center gap-8 mt-8">
           {[["15+", "Years in service"], ["500K+", "Visas processed"], ["3", "Airport offices"], ["~0 min", "Processing time"]].map(([num, label]) => <div key={label}>
