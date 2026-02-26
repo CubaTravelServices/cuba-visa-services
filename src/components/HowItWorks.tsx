@@ -4,7 +4,7 @@ const steps = [
   { num: "01", title: "Choose Your Service", desc: "Select your OFAC travel category, travel dates, and D'Viajeros option" },
   { num: "02", title: "Complete Application", desc: "Fill in passport details. Pre-validated against Cuban consulate requirements." },
   { num: "03", title: "Secure Payment", desc: "Pay by credit card — US cards work here unlike evisacuba.cu" },
-  { num: "04", title: "Express Application Processing", desc: "E-visa arrives by email immediately. Print or present digitally." },
+  { num: "04", title: "Express Application Processing", desc: "E-Visa arrives by email usually within 15 Minutes. Print or present digitally." },
 ];
 
 const HowItWorks = () => {
