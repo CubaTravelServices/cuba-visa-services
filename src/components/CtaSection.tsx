@@ -10,7 +10,8 @@ const CtaSection = () =>
     </p>
     <div className="flex flex-wrap justify-center gap-4">
       <a href="/apply?plan=standard" className="btn-gold">Apply for Cuba E-Visa Now →</a>
-      <a href="mailto:Info@CubaVisaServices.com" className="btn-ghost">📞 Speak to Our Team</a>
+      <a href="tel:+18009632822" className="btn-ghost">📞 1-800-963-2822</a>
+      <a href="/chat" className="btn-ghost">💬 Chat with Us</a>
     </div>
   </section>;
 
