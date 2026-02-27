@@ -70,11 +70,13 @@ const HeroPricing = () => {
             ★ Most Popular
           </span>
       }
-        <h3 className="font-display text-[22px] font-bold text-navy">{plan.name}</h3>
-        <p className="text-[13px] min-h-[38px] mt-1 text-slate-brand">{plan.tagline}</p>
-        <div className="mt-4 mb-1">
-          <span className="font-display text-[52px] font-bold text-navy">${plan.price}</span>
-          <span className="text-[13px] ml-2 text-slate-brand">per traveler</span>
+        <h3 className="font-display text-[22px] font-bold text-navy min-h-[56px]">{plan.name}</h3>
+        <p className="text-[13px] min-h-[40px] mt-1 text-slate-brand">{plan.tagline}</p>
+        <div className="mt-4 mb-1 min-h-[68px] flex items-end">
+          <div>
+            <span className="font-display text-[52px] font-bold text-navy">${plan.price}</span>
+            <span className="text-[13px] ml-2 text-slate-brand">per traveler</span>
+          </div>
         </div>
         <hr className="my-4 border-ivory-mid" />
         <ul className="space-y-2.5 mb-6 flex-1">
