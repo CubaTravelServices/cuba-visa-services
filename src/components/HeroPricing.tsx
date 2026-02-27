@@ -60,10 +60,10 @@ const HeroPricing = () => {
   };
 
   return (
-    <div className="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto items-start justify-items-center">
+    <div className="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto items-stretch justify-items-center">
       {plans.map((plan) =>
       <div
-        key={plan.key} className="relative rounded-xl p-6 bg-white shadow-md w-full">
+        key={plan.key} className="relative rounded-xl p-6 bg-white shadow-md w-full flex flex-col">
 
         {plan.popular &&
       <span className="absolute -top-3.5 left-1/2 -translate-x-1/2 bg-gold text-navy text-[11px] font-extrabold uppercase tracking-wider px-4 py-1 rounded-full">
@@ -77,7 +77,7 @@ const HeroPricing = () => {
           <span className="text-[13px] ml-2 text-slate-brand">per traveler</span>
         </div>
         <hr className="my-4 border-ivory-mid" />
-        <ul className="space-y-2.5 mb-6">
+        <ul className="space-y-2.5 mb-6 flex-1">
           {plan.features.map((f, i) => {
           const text = typeof f === "string" ? f : f.text;
           const bold = typeof f !== "string" && f.bold;
@@ -91,7 +91,7 @@ const HeroPricing = () => {
         </ul>
         <button
           onClick={() => handleGetStarted(plan)}
-          className="w-full bg-navy text-white font-semibold py-3 rounded text-sm uppercase tracking-wider hover:bg-gold hover:text-navy transition-all duration-300">
+          className="w-full bg-navy text-white font-semibold py-3 rounded text-sm uppercase tracking-wider hover:bg-gold hover:text-navy transition-all duration-300 mt-auto">
             Add to Cart →
           </button>
       </div>
