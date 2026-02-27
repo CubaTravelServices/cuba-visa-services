@@ -1,3 +1,8 @@
+import arcLogo from "@/assets/arc-logo.png";
+import iataLogo from "@/assets/iata-logo.jpg";
+import astaLogo from "@/assets/asta-logo.webp";
+import ntaLogo from "@/assets/nta-logo.jpg";
+
 const footerLinks = {
   services: ["Cuba E-Visa", "D'Viajeros Form", "Business Visa", "Passport Renewal", "Birth Certificate", "Consular Services"],
   travel: ["Cuba Visa for US Citizens", "Cuba Travel Requirements 2026", "OFAC Categories", "D'Viajeros Guide", "E-Visa vs Tourist Card", "Cuba Travel Insurance"],
@@ -29,7 +34,13 @@ const Footer = () =>
         </div>
     )}
     </div>
-    <div className="border-t border-white/[0.07] pt-6 text-center text-[12px] space-y-3">
+    <div className="border-t border-white/[0.07] pt-6 text-center text-[12px] space-y-5">
+      <div className="flex flex-wrap items-center justify-center gap-6">
+        <img src={iataLogo} alt="IATA Accredited Agent" className="h-12 bg-white rounded px-2 py-1 object-contain" />
+        <img src={arcLogo} alt="ARC Accredited Agency" className="h-10 object-contain" />
+        <img src={astaLogo} alt="American Society of Travel Advisors" className="h-10 bg-white rounded px-2 py-1 object-contain" />
+        <img src={ntaLogo} alt="National Tour Association" className="h-10 bg-white rounded px-2 py-1 object-contain" />
+      </div>
       <p>© 2026 Cuba Travel Services. All rights reserved. · IATA Accredited · OFAC Authorized · Florida Seller of Travel · Not affiliated with the Cuban Government. · We are not a government agency.</p>
       <div className="text-white/30 leading-relaxed max-w-3xl mx-auto space-y-1.5">
         <p>Cuba Travel Services, Inc. is registered with the State of Florida as a Seller of Travel. Seller of Travel Reg. No. ST36556.</p>
