@@ -241,7 +241,7 @@ The transition to e-visas eliminates several pain points:
 1. **No more scrambling at the airport** — Apply from home days before your trip
 2. **No more handwriting errors** — Digital forms prevent common mistakes
 3. **No more lost cards** — Your e-visa lives in your email, backed up in the cloud
-4. **Faster processing** — Express delivery in ~10 minutes vs. days or weeks
+4. **Faster processing** — Express delivery in ~15 minutes vs. days or weeks
 
 ## Are the Requirements the Same?
 
