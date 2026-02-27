@@ -92,7 +92,7 @@ You cannot obtain a Cuba e-visa on arrival in Cuba. However, Cuba Visa Services 
     readTime: "6 min read",
     content: `## Understanding OFAC Travel Categories
 
-The Office of Foreign Assets Control (OFAC), part of the US Department of the Treasury, regulates travel to Cuba for US citizens. While tourism is technically not permitted, 12 authorized categories cover virtually every type of meaningful travel.
+The Office of Foreign Assets Control (OFAC), part of the US Department of the Treasury, regulates travel to Cuba for US citizens. While tourism is not permitted, 12 authorized categories cover virtually every type of meaningful travel.
 
 ## The Most Popular Category: Support for the Cuban People
 
@@ -122,7 +122,7 @@ For journalists, reporters, photographers, and filmmakers working on Cuba-relate
 Activities related to humanitarian aid, disaster relief, and public health initiatives.
 
 ### Professional Research
-Academic research and professional meetings that could not take place elsewhere.
+Academic research and professional meetings requiring direct engagement in Cuba.
 
 ## How to Self-Certify
 
