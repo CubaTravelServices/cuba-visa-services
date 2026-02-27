@@ -44,7 +44,7 @@
     --ivory-mid: 0 0% 96%;
     --slate: 212 14% 48%;
     --white: 0 0% 100%;
-    --darkest: 220 60% 6%;
+    --darkest: 0 1% 10%;
 
     --font-display: 'Cormorant Garamond', Georgia, serif;
     --font-body: 'DM Sans', system-ui, sans-serif;
@@ -59,8 +59,8 @@
     --sidebar-ring: 217.2 91.2% 59.8%;
 
     /* Navigation accent */
-    --burgundy: 350 40% 18%;
-    --burgundy-light: 350 35% 25%;
+    --burgundy: 0 1% 10%;
+    --burgundy-light: 0 1% 15%;
   }
 }
 
