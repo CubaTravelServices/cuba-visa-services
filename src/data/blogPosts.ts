@@ -287,8 +287,8 @@ Several major US airlines operate regular service to Cuba, primarily to José Ma
 - **Cuba Travel Services:** Staff present at TPA — the only visa service at Southwest's Tampa Cuba operation
 
 ### JetBlue Airways
-- **Route:** Fort Lauderdale (FLL) → Havana (HAV)
-- **Frequency:** Regular service
+- **Route:** Houston (IAH) → Havana (HAV) and other select U.S. gateways
+- **Hub advantage:** Major U.S. gateway for Cuba travel
 
 ## What to Expect at Check-In
 
