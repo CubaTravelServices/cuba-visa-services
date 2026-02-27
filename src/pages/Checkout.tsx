@@ -12,12 +12,16 @@ const STEPS = ["Review Order", "OFAC Category", "Application Details", "Payment"
 const OFAC_CATEGORIES = [
   "Support for the Cuban People",
   "Family Visits",
+  "Official Business of the U.S. Government, Foreign Governments, and Certain Intergovernmental Organizations",
+  "Journalistic Activity",
+  "Professional Research and Professional Meetings",
+  "Educational Activities",
   "Religious Activities",
+  "Public Performances, Clinics, Workshops, Athletic and Other Competitions, and Exhibitions",
   "Humanitarian Projects",
-  "Journalism",
-  "Professional Research",
-  "Education",
-  "Other OFAC Category",
+  "Activities of Private Foundations or Research or Educational Institutes",
+  "Exportation, Importation, or Transmission of Information or Informational Materials",
+  "Certain Export Transactions",
 ];
 
 const Checkout = () => {
