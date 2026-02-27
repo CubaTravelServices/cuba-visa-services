@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import { blogPosts } from "@/data/blogPosts";
 import { ArrowLeft, Clock, Calendar, Tag } from "lucide-react";
+import Footer from "@/components/Footer";
 
 const BlogListing = () => {
   const featured = blogPosts.find((p) => p.featured);
@@ -77,6 +78,7 @@ const BlogListing = () => {
           <Link to="/" className="btn-gold">Apply for Your E-Visa →</Link>
         </div>
       </div>
+      <Footer />
     </div>
   );
 };
