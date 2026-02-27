@@ -60,47 +60,42 @@ const HeroPricing = () => {
   };
 
   return (
-    <div className="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto items-start">
+    <div className="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto items-start justify-items-center">
       {plans.map((plan) =>
       <div
-        key={plan.key} className="relative rounded-xl p-6 bg-white shadow-md">
+        key={plan.key} className="relative rounded-xl p-6 bg-white shadow-md w-full">
 
-
-
-
-
-
-          {plan.popular &&
-        <span className="absolute -top-3.5 left-1/2 -translate-x-1/2 bg-gold text-navy text-[11px] font-extrabold uppercase tracking-wider px-4 py-1 rounded-full">
-              ★ Most Popular
-            </span>
-        }
-          <h3 className="font-display text-[22px] font-bold text-navy">{plan.name}</h3>
-          <p className="text-[13px] min-h-[38px] mt-1 text-slate-brand">{plan.tagline}</p>
-          <div className="mt-4 mb-1">
-            <span className="font-display text-[52px] font-bold text-navy">${plan.price}</span>
-            <span className="text-[13px] ml-2 text-slate-brand">per traveler</span>
-          </div>
-          <hr className="my-4 border-ivory-mid" />
-          <ul className="space-y-2.5 mb-6">
-            {plan.features.map((f, i) => {
-            const text = typeof f === "string" ? f : f.text;
-            const bold = typeof f !== "string" && f.bold;
-            const italic = typeof f !== "string" && (f as any).italic;
-            return (
-              <li key={i} className={`text-sm flex items-start gap-2 text-navy ${bold ? "font-semibold" : ""} ${italic ? "italic text-[13px] opacity-70" : ""}`}>
-                  <span className="text-gold mt-0.5">✓</span> {text}
-                </li>);
-
-          })}
-          </ul>
-          <button
-            onClick={() => handleGetStarted(plan)}
-            className="w-full bg-navy text-white font-semibold py-3 rounded text-sm uppercase tracking-wider hover:bg-gold hover:text-navy transition-all duration-300">
-              Add to Cart →
-            </button>
+        {plan.popular &&
+      <span className="absolute -top-3.5 left-1/2 -translate-x-1/2 bg-gold text-navy text-[11px] font-extrabold uppercase tracking-wider px-4 py-1 rounded-full">
+            ★ Most Popular
+          </span>
+      }
+        <h3 className="font-display text-[22px] font-bold text-navy">{plan.name}</h3>
+        <p className="text-[13px] min-h-[38px] mt-1 text-slate-brand">{plan.tagline}</p>
+        <div className="mt-4 mb-1">
+          <span className="font-display text-[52px] font-bold text-navy">${plan.price}</span>
+          <span className="text-[13px] ml-2 text-slate-brand">per traveler</span>
         </div>
-      )}
+        <hr className="my-4 border-ivory-mid" />
+        <ul className="space-y-2.5 mb-6">
+          {plan.features.map((f, i) => {
+          const text = typeof f === "string" ? f : f.text;
+          const bold = typeof f !== "string" && f.bold;
+          const italic = typeof f !== "string" && (f as any).italic;
+          return (
+            <li key={i} className={`text-sm flex items-start gap-2 text-navy ${bold ? "font-semibold" : ""} ${italic ? "italic text-[13px] opacity-70" : ""}`}>
+                <span className="text-gold mt-0.5">✓</span> {text}
+              </li>);
+
+        })}
+        </ul>
+        <button
+          onClick={() => handleGetStarted(plan)}
+          className="w-full bg-navy text-white font-semibold py-3 rounded text-sm uppercase tracking-wider hover:bg-gold hover:text-navy transition-all duration-300">
+            Add to Cart →
+          </button>
+      </div>
+    )}
 
       <p className="md:col-span-3 text-center text-white/40 text-sm mt-4">
         All packages include secure credit card payment · Secure checkout · Direct consular coordination

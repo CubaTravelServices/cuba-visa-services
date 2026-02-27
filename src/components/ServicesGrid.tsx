@@ -1,12 +1,13 @@
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
+import { FileText, ClipboardList, Briefcase, BookOpen, Stamp, ScrollText } from "lucide-react";
 
 const services = [
-  { icon: "🇨🇺", name: "Cuba E-Visa", desc: "The mandatory travel authorization for all US citizens visiting Cuba. Instant email delivery.", price: "From $85 · incl. D'Viajeros" },
-  { icon: "📝", name: "D'Viajeros Form", desc: "Cuba's mandatory digital health and customs declaration. Completed correctly for you.", price: "From $25" },
-  { icon: "💼", name: "Cuba Business Visa", desc: "Business travel requires proper OFAC documentation and consulate authorization.", price: "Contact for pricing" },
-  { icon: "", name: "Religious Visa", desc: "Processing official religious visa", price: "From $175" },
-  { icon: "🛂", name: "Cuban Passport Renewal", desc: "Cuban-born US citizens: renew your Cuban passport through our authorized consular services.", price: "From $250.00" },
-  { icon: "📄", name: "Cuban Birth Certificate & Consular", desc: "Certified documents, powers of attorney, official consular services for Cuban nationals in the US.", price: "From $100" },
+  { Icon: FileText, name: "Cuba E-Visa", desc: "The mandatory travel authorization for all US citizens visiting Cuba. Instant email delivery.", price: "From $85 · incl. D'Viajeros" },
+  { Icon: ClipboardList, name: "D'Viajeros Form", desc: "Cuba's mandatory digital health and customs declaration. Completed correctly for you.", price: "From $25" },
+  { Icon: Briefcase, name: "Cuba Business Visa", desc: "Business travel requires proper OFAC documentation and consulate authorization.", price: "Contact for pricing" },
+  { Icon: BookOpen, name: "Religious Visa", desc: "Processing official religious visa", price: "From $175" },
+  { Icon: Stamp, name: "Cuban Passport Renewal", desc: "Cuban-born US citizens: renew your Cuban passport through our authorized consular services.", price: "From $250.00" },
+  { Icon: ScrollText, name: "Cuban Birth Certificate & Consular", desc: "Certified documents, powers of attorney, official consular services for Cuban nationals in the US.", price: "From $100" },
 ];
 
 const ServicesGrid = () => {
@@ -20,7 +21,7 @@ const ServicesGrid = () => {
       <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
         {services.map((s) => (
           <div key={s.name} className="bg-ivory border border-ivory-mid rounded-lg p-8 card-hover animate-on-scroll">
-            <div className="text-[32px] mb-3">{s.icon}</div>
+            <s.Icon className="w-8 h-8 text-gold mb-3" />
             <h3 className="font-display text-[17px] font-bold text-navy mb-2">{s.name}</h3>
             <p className="text-sm text-slate-brand leading-relaxed mb-4">{s.desc}</p>
             <p className="font-display text-[22px] font-bold text-navy">{s.price}</p>

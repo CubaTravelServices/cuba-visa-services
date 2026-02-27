@@ -38,7 +38,7 @@ const GeoContentBlock = () => {
               ))}
             </div>
             <p className="text-[11px] text-slate-brand/60 mt-2 italic">
-              Physical airport offices at MIA and TPA only. All other locations served via online processing.
+              Physical airport office at MIA. All other locations served via online processing.
             </p>
           </div>
         </div>

@@ -1,3 +1,5 @@
+import { Phone, MessageCircle } from "lucide-react";
+
 const CtaSection = () => (
   <section
     className="bg-navy text-center section-padding"
@@ -12,8 +14,8 @@ const CtaSection = () => (
     </p>
     <div className="flex flex-wrap justify-center gap-4">
       <a href="/apply?plan=standard" className="btn-gold">Apply for Cuba E-Visa Now →</a>
-      <a href="tel:+18009632822" className="btn-ghost">📞 1-800-963-2822</a>
-      <a href="/chat" className="btn-ghost">💬 Chat with Us</a>
+      <a href="tel:+18009632822" className="btn-ghost inline-flex items-center gap-2"><Phone className="w-4 h-4" /> 1-800-963-2822</a>
+      <a href="/chat" className="btn-ghost inline-flex items-center gap-2"><MessageCircle className="w-4 h-4" /> Chat with Us</a>
     </div>
   </section>
 );

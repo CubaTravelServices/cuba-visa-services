@@ -1,10 +1,11 @@
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
+import { Users, ClipboardCheck, Handshake, Landmark } from "lucide-react";
 
 const pillars = [
-  { icon: "👨‍👩‍👧‍👦", title: "Supporting Cuban Families", desc: "Helping families maintain connections through compliant travel and civil documentation." },
-  { icon: "📋", title: "Facilitating Compliant Documentation", desc: "Every visa, passport, and certificate processed through proper consular channels." },
-  { icon: "🤝", title: "Constructive Engagement", desc: "Promoting meaningful, lawful interaction between U.S. travelers and the Cuban people." },
-  { icon: "🏛️", title: "Long-Standing Commitment", desc: "25+ years dedicated to lawful travel documentation and consular services." },
+  { Icon: Users, title: "Supporting Cuban Families", desc: "Helping families maintain connections through compliant travel and civil documentation." },
+  { Icon: ClipboardCheck, title: "Facilitating Compliant Documentation", desc: "Every visa, passport, and certificate processed through proper consular channels." },
+  { Icon: Handshake, title: "Constructive Engagement", desc: "Promoting meaningful, lawful interaction between U.S. travelers and the Cuban people." },
+  { Icon: Landmark, title: "Long-Standing Commitment", desc: "25+ years dedicated to lawful travel documentation and consular services." },
 ];
 
 const MissionSection = () => {
@@ -24,7 +25,7 @@ const MissionSection = () => {
         <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
           {pillars.map((p) => (
             <div key={p.title} className="bg-white rounded-lg border border-ivory-mid p-6 text-center animate-on-scroll">
-              <div className="text-3xl mb-3">{p.icon}</div>
+              <p.Icon className="w-8 h-8 text-gold mx-auto mb-3" />
               <h3 className="font-display text-lg font-bold text-navy mb-2">{p.title}</h3>
               <p className="text-sm text-slate-brand leading-relaxed">{p.desc}</p>
             </div>

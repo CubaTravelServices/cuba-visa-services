@@ -1,7 +1,7 @@
 const footerLinks = {
   services: ["Cuba E-Visa", "D'Viajeros Form", "Business Visa", "Passport Renewal", "Birth Certificate", "Consular Services"],
   travel: ["Cuba Visa for US Citizens", "Cuba Travel Requirements 2026", "OFAC Categories", "D'Viajeros Guide", "E-Visa vs Tourist Card", "Cuba Travel Insurance"],
-  airlines: ["American Airlines Cuba Visa", "Delta Airlines Cuba Visa", "Southwest Airlines Cuba Visa", "JetBlue Cuba Visa", "Cuba Cruise Visa", "Miami Airport Cuba"]
+  airlines: ["American Airlines Cuba Visa", "Delta Airlines Cuba Visa", "Southwest Airlines Cuba Visa", "JetBlue Cuba Visa", "United Airlines Cuba Visa", "Spirit Airlines Cuba Visa"]
 };
 
 const Footer = () => (
@@ -12,9 +12,9 @@ const Footer = () => (
           Cuba<span className="text-gold">Visa</span>Services
         </div>
         <p className="text-sm leading-relaxed mb-3">
-          Trusted Cuba visa and e-visa provider since 1999. Direct consular coordination. Physical staff at MIA and TPA airports. Cuba Visa Services is a Cuba Travel Services affiliate. We are not a government agency.
+          Trusted Cuba visa and e-visa provider since 1999. Direct consular coordination. Physical staff at MIA airport. Cuba Visa Services is a Cuba Travel Services affiliate. We are not a government agency.
         </p>
-        <p className="text-[12px]">Airport offices: Miami (MIA) · Tampa (TPA)</p>
+        <p className="text-[12px]">Airport office: Miami (MIA)</p>
       </div>
       {Object.entries(footerLinks).map(([title, links]) => (
         <div key={title}>
