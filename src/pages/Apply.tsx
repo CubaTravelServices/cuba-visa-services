@@ -2,6 +2,7 @@ import TopBar from "@/components/TopBar";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import ApplicationCard from "@/components/ApplicationCard";
+import DocumentSteps from "@/components/DocumentSteps";
 import { useSearchParams, Link } from "react-router-dom";
 
 const Apply = () => {
@@ -28,6 +29,7 @@ const Apply = () => {
           <ApplicationCard />
         </div>
       </main>
+      <DocumentSteps />
       <Footer />
     </div>
   );
