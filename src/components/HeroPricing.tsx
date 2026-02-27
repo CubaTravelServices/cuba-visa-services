@@ -7,43 +7,45 @@ const plans = [
   name: "Standard Cuba E-Visa",
   tagline: "Perfect for travelers with flexible schedules",
   price: 85,
+  originalPrice: null as number | null,
   features: [
   "Single-Entry Cuba E-Visa",
   "Valid for 90 Days from Issuance",
   "Email Delivery",
   "Document Review Included",
   "Standard Customer Support"],
-
-  popular: false
+  popular: false,
+  discount: null as string | null
 },
 {
   key: "express",
   name: "Express Cuba E-Visa",
   tagline: "As fast as 10 minutes — ideal for last-minute plans",
-  price: 135,
+  price: 121.50,
+  originalPrice: 135,
   features: [
   { text: "Includes Everything From Standard Package Plus:", italic: true },
   "Priority Customer Support",
   { text: "15 Minute Application Processing", bold: true },
   { text: "D'Viajeros Assistance Included", bold: true }],
-
-  popular: true
+  popular: true,
+  discount: "10% Off"
 },
 {
   key: "signature",
   name: "Signature Service Cuba E-Visa",
   tagline: "All Express benefits, plus optional VIP upgrades",
-  price: 225,
+  price: 202.50,
+  originalPrice: 225,
   features: [
   { text: "Includes Everything From Express Package Plus:", italic: true },
   { text: "VIP Immigration Processing on Arrival", bold: true },
   "VIP Departure Lounge Access",
   "VIP Transfer to City Center",
   "Meet & Greet at Airport"],
-
-  popular: false
+  popular: false,
+  discount: "10% Off"
 }];
-
 
 const HeroPricing = () => {
   const navigate = useNavigate();
@@ -65,16 +67,24 @@ const HeroPricing = () => {
       <div
         key={plan.key} className="relative rounded-xl p-6 bg-white shadow-md w-full flex flex-col">
 
+        {plan.discount &&
+        <span className="absolute -top-1 -right-1 bg-red-600 text-white text-[10px] font-extrabold uppercase tracking-wider px-3 py-1.5 rounded-bl-lg rounded-tr-xl shadow-lg z-10">
+            {plan.discount}
+          </span>
+        }
         {plan.popular &&
-      <span className="absolute -top-3.5 left-1/2 -translate-x-1/2 bg-gold text-navy text-[11px] font-extrabold uppercase tracking-wider px-4 py-1 rounded-full">
+        <span className="absolute -top-3.5 left-1/2 -translate-x-1/2 bg-gold text-navy text-[11px] font-extrabold uppercase tracking-wider px-4 py-1 rounded-full">
             ★ Most Popular
           </span>
-      }
+        }
         <h3 className="font-display text-[22px] font-bold text-navy min-h-[56px]">{plan.name}</h3>
         <p className="text-[13px] min-h-[40px] mt-1 text-slate-brand">{plan.tagline}</p>
         <div className="mt-4 mb-1 min-h-[68px] flex items-end">
           <div>
-            <span className="font-display text-[52px] font-bold text-navy">${plan.price}</span>
+            {plan.originalPrice && (
+              <span className="text-[18px] text-slate-400 line-through mr-2">${plan.originalPrice}</span>
+            )}
+            <span className="font-display text-[52px] font-bold text-navy">${plan.price % 1 === 0 ? plan.price : plan.price.toFixed(2)}</span>
             <span className="text-[13px] ml-2 text-slate-brand">per traveler</span>
           </div>
         </div>
