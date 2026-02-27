@@ -4,45 +4,45 @@ import { Checkbox } from "@/components/ui/checkbox";
 import { useCart } from "@/contexts/CartContext";
 
 const PACKAGES = [
-  {
-    key: "standard",
-    name: "Standard Cuba E-Visa",
-    price: 85,
-    badge: null as string | null,
-    features: [
-      "Single-Entry Cuba E-Visa",
-      "Valid for 90 Days from Issuance",
-      "Email Delivery",
-      "Document Review Included",
-      "Standard Customer Support",
-    ],
-  },
-  {
-    key: "express",
-    name: "Express Cuba E-Visa",
-    price: 135,
-    badge: "⭐ Most Popular",
-    features: [
-      "Everything in Standard, plus:",
-      "Priority Customer Support",
-      "15 Minute Application Processing",
-      "D'Viajeros Assistance Included",
-    ],
-  },
-  {
-    key: "signature",
-    name: "Signature Service Cuba E-Visa",
-    price: 225,
-    badge: null as string | null,
-    features: [
-      "Everything in Express, plus:",
-      "VIP Immigration Processing on Arrival",
-      "VIP Departure Lounge Access",
-      "VIP Transfer to City Center",
-      "Meet & Greet at Airport",
-    ],
-  },
-];
+{
+  key: "standard",
+  name: "Standard Cuba E-Visa",
+  price: 85,
+  badge: null as string | null,
+  features: [
+  "Single-Entry Cuba E-Visa",
+  "Valid for 90 Days from Issuance",
+  "Email Delivery",
+  "Document Review Included",
+  "Standard Customer Support"]
+
+},
+{
+  key: "express",
+  name: "Express Cuba E-Visa",
+  price: 135,
+  badge: "⭐ Most Popular",
+  features: [
+  "Everything in Standard, plus:",
+  "Priority Customer Support",
+  "15 Minute Application Processing",
+  "D'Viajeros Assistance Included"]
+
+},
+{
+  key: "signature",
+  name: "Signature Service Cuba E-Visa",
+  price: 225,
+  badge: null as string | null,
+  features: [
+  "Everything in Express, plus:",
+  "VIP Immigration Processing on Arrival",
+  "VIP Departure Lounge Access",
+  "VIP Transfer to City Center",
+  "Meet & Greet at Airport"]
+
+}];
+
 
 const ApplicationCard = () => {
   const [searchParams] = useSearchParams();
@@ -76,56 +76,56 @@ const ApplicationCard = () => {
           <select
             className={selectClass}
             value={selectedPackage}
-            onChange={(e) => setSelectedPackage(e.target.value)}
-          >
-            {PACKAGES.map((pkg) => (
-              <option key={pkg.key} value={pkg.key}>
+            onChange={(e) => setSelectedPackage(e.target.value)}>
+
+            {PACKAGES.map((pkg) =>
+            <option key={pkg.key} value={pkg.key}>
                 {pkg.name} — ${pkg.price}{pkg.badge ? ` (${pkg.badge})` : ""}
               </option>
-            ))}
+            )}
           </select>
-          {PACKAGES.find((p) => p.key === selectedPackage)?.badge && (
-            <span className="inline-block mt-1.5 text-[11px] font-semibold bg-gold/15 text-gold px-2.5 py-0.5 rounded-full">
+          {PACKAGES.find((p) => p.key === selectedPackage)?.badge &&
+          <span className="inline-block mt-1.5 text-[11px] font-semibold bg-gold/15 text-gold px-2.5 py-0.5 rounded-full">
               {PACKAGES.find((p) => p.key === selectedPackage)?.badge}
             </span>
-          )}
+          }
           {/* Package features */}
           <div className="bg-ivory border border-ivory-mid rounded p-4 mt-2">
             <ul className="space-y-1.5">
-              {PACKAGES.find((p) => p.key === selectedPackage)?.features.map((f, i) => (
-                <li key={i} className={`text-[13px] flex items-start gap-2 ${i === 0 && selectedPackage !== "standard" ? "text-slate-brand italic" : "text-navy"}`}>
+              {PACKAGES.find((p) => p.key === selectedPackage)?.features.map((f, i) =>
+              <li key={i} className={`text-[13px] flex items-start gap-2 ${i === 0 && selectedPackage !== "standard" ? "text-slate-brand italic" : "text-navy"}`}>
                   <span className="text-gold mt-0.5">✓</span>
                   <span>{f}</span>
                 </li>
-              ))}
+              )}
             </ul>
           </div>
         </div>
         <div>
           <label className={labelClass}>Nationality</label>
-          <select className={selectClass} value={nationality} onChange={e => setNationality(e.target.value)}>
+          <select className={selectClass} value={nationality} onChange={(e) => setNationality(e.target.value)}>
             <option>US Citizen</option><option>Canada</option><option>UK</option><option>Spain</option><option>Other</option>
           </select>
         </div>
         <div>
           <label className={labelClass}>Travel Category</label>
-          <select className={selectClass} value={category} onChange={e => setCategory(e.target.value)}>
+          <select className={selectClass} value={category} onChange={(e) => setCategory(e.target.value)}>
             <option>Support for the Cuban People</option><option>Family Visits</option><option>Religious Activities</option><option>Humanitarian Projects</option><option>Journalism</option><option>Professional Research</option><option>Education</option><option>Other OFAC</option>
           </select>
         </div>
         <div>
-          <label className={labelClass}>Travel Date</label>
-          <input type="date" className={selectClass} value={date} onChange={e => setDate(e.target.value)} />
+          <label className={labelClass}>date of arrival to cuba     </label>
+          <input type="date" className={selectClass} value={date} onChange={(e) => setDate(e.target.value)} />
         </div>
         <div>
           <label className={labelClass}>Departing Airline</label>
-          <select className={selectClass} value={airline} onChange={e => setAirline(e.target.value)}>
+          <select className={selectClass} value={airline} onChange={(e) => setAirline(e.target.value)}>
             <option>American Airlines</option><option>Delta</option><option>Southwest</option><option>JetBlue</option><option>Other</option>
           </select>
         </div>
 
         {/* Add-ons — only for Standard */}
-        {selectedPackage === "standard" && (
+        {selectedPackage === "standard" &&
         <div>
           <label className={labelClass}>Add-Ons</label>
           <div className="space-y-3 bg-ivory border border-ivory-mid rounded p-4">
@@ -133,8 +133,8 @@ const ApplicationCard = () => {
               <Checkbox
                 checked={addDviajeros}
                 onCheckedChange={(checked) => setAddDviajeros(checked === true)}
-                className="mt-0.5"
-              />
+                className="mt-0.5" />
+
               <div className="flex-1">
                 <div className="flex items-center justify-between">
                   <span className="text-sm font-semibold text-navy">D'Viajeros Assistance</span>
@@ -148,8 +148,8 @@ const ApplicationCard = () => {
               <Checkbox
                 checked={addExpress}
                 onCheckedChange={(checked) => setAddExpress(checked === true)}
-                className="mt-0.5"
-              />
+                className="mt-0.5" />
+
               <div className="flex-1">
                 <div className="flex items-center justify-between">
                   <span className="text-sm font-semibold text-navy">Express Application Processing</span>
@@ -160,7 +160,7 @@ const ApplicationCard = () => {
             </label>
           </div>
         </div>
-        )}
+        }
       </div>
 
       <div className="flex items-baseline justify-between mt-6 mb-4">
@@ -177,14 +177,14 @@ const ApplicationCard = () => {
             basePrice: pkg.price,
             addOns: {
               dviajeros: selectedPackage === "standard" ? addDviajeros : false,
-              expressProcessing: selectedPackage === "standard" ? addExpress : false,
+              expressProcessing: selectedPackage === "standard" ? addExpress : false
             },
-            travelers: 1,
+            travelers: 1
           });
           navigate("/checkout");
         }}
-        className="w-full bg-navy text-white font-semibold py-3.5 rounded text-sm uppercase tracking-wider hover:bg-gold hover:text-navy transition-all duration-300"
-      >
+        className="w-full bg-navy text-white font-semibold py-3.5 rounded text-sm uppercase tracking-wider hover:bg-gold hover:text-navy transition-all duration-300">
+
         Continue to Application →
       </button>
 
@@ -193,8 +193,8 @@ const ApplicationCard = () => {
         <span>✓ Consulate Authorized</span>
         <span>⚡ Instant Email</span>
       </div>
-    </div>
-  );
+    </div>);
+
 };
 
 export default ApplicationCard;
