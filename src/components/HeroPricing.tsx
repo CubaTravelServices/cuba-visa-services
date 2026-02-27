@@ -103,7 +103,7 @@ const HeroPricing = () => {
       )}
 
       <p className="md:col-span-3 text-center text-white/40 text-sm mt-4">
-        All packages include secure credit card payment · OFAC-compliant documentation · Direct consulate authorization
+        All packages include secure credit card payment · Secure checkout · Direct consular coordination
       </p>
     </div>);
 

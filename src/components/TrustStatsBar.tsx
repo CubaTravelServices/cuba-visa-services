@@ -1,10 +1,10 @@
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 
 const stats = [
-  { icon: "🏛️", value: "Direct", desc: "Cuban Consulate contract — the only consumer provider with this agreement" },
-  { icon: "✈️", value: "100%", desc: "US airlines operating Cuba routes covered under service agreements" },
-  { icon: "⚡", value: "15 Min", desc: "E-visa processing — application completed in under 15 minutes" },
-  { icon: "🎖️", value: "28 Yrs", desc: "IATA accredited · OFAC authorized · Florida Seller of Travel" },
+  { icon: "🏛️", value: "Direct", desc: "Consular coordination for Cuba documentation" },
+  { icon: "✈️", value: "100%", desc: "US airlines operating Cuba routes covered" },
+  { icon: "⚡", value: "15 Min", desc: "E-visa application processing time" },
+  { icon: "🎖️", value: "25+ Yrs", desc: "Of Cuba regulatory experience" },
 ];
 
 const TrustStatsBar = () => {

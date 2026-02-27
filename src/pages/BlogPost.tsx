@@ -11,7 +11,7 @@ const BlogPost = () => {
       <div className="min-h-screen bg-ivory flex items-center justify-center">
         <div className="text-center">
           <h1 className="font-display text-4xl font-bold text-navy mb-4">Post Not Found</h1>
-          <Link to="/blog" className="btn-gold">Back to Blog</Link>
+          <Link to="/insights" className="btn-gold">Back to Insights</Link>
         </div>
       </div>
     );
@@ -88,7 +88,7 @@ const BlogPost = () => {
       {/* Hero */}
       <div className="bg-navy text-white section-padding pb-12" style={{ backgroundImage: "radial-gradient(ellipse at 50% 80%, rgba(201,168,76,0.08), transparent 60%)" }}>
         <div className="max-w-3xl mx-auto">
-          <Link to="/blog" className="inline-flex items-center gap-2 text-gold-light text-sm mb-6 hover:text-gold transition-colors">
+          <Link to="/insights" className="inline-flex items-center gap-2 text-gold-light text-sm mb-6 hover:text-gold transition-colors">
             <ArrowLeft size={16} /> All Articles
           </Link>
           <span className="inline-flex items-center gap-1.5 text-gold-light text-xs font-semibold uppercase tracking-wider mb-3">
@@ -167,7 +167,7 @@ const BlogPost = () => {
           <h3 className="font-display text-2xl font-bold text-navy mb-6">Related Articles</h3>
           <div className="grid md:grid-cols-3 gap-4">
             {related.map((r) => (
-              <Link to={`/blog/${r.slug}`} key={r.slug} className="block group">
+              <Link to={`/insights/${r.slug}`} key={r.slug} className="block group">
                 <article className="bg-white rounded-lg border border-ivory-mid p-5 h-full card-hover">
                   <span className="text-gold text-[11px] font-semibold uppercase tracking-wider">{r.category}</span>
                   <h4 className="font-display text-[16px] font-bold text-navy group-hover:text-gold transition-colors mt-1 leading-snug">{r.title}</h4>
