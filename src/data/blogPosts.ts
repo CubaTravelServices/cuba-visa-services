@@ -128,9 +128,9 @@ Academic research and professional meetings requiring direct engagement in Cuba.
 
 You do **not** need to apply for a specific license from OFAC. Self-certification means:
 
-1. You declare your travel category on your e-visa application
-2. You keep records of your activities for 5 years
-3. You can demonstrate your activities align with the declared category if asked
+- You declare your travel category on your e-visa application
+- You keep records of your activities for 5 years
+- You can demonstrate your activities align with the declared category if asked
 
 ## Common Mistakes to Avoid
 
