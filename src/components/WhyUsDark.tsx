@@ -1,10 +1,11 @@
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
+import { Award, Target, Handshake, Globe } from "lucide-react";
 
 const diffs = [
-  { icon: "🎖️", title: "25+ Years of Cuba Regulatory Experience", desc: "Deep expertise navigating Cuba's documentation requirements since 1999." },
-  { icon: "🎯", title: "Exclusively Focused on Cuba Documentation", desc: "Cuba visas, passports, and civil documents are all we do." },
-  { icon: "🤝", title: "Direct Consular Coordination", desc: "We work through official consular channels for your documentation." },
-  { icon: "🌐", title: "Mission-Driven Commitment to Constructive Engagement", desc: "Supporting Cuban families and facilitating compliant travel documentation." },
+  { Icon: Award, title: "25+ Years of Cuba Regulatory Experience", desc: "Deep expertise navigating Cuba's documentation requirements since 1999." },
+  { Icon: Target, title: "Exclusively Focused on Cuba Documentation", desc: "Cuba visas, passports, and civil documents are all we do." },
+  { Icon: Handshake, title: "Direct Consular Coordination", desc: "We work through official consular channels for your documentation." },
+  { Icon: Globe, title: "Mission-Driven Commitment to Constructive Engagement", desc: "Supporting Cuban families and facilitating compliant travel documentation." },
 ];
 
 const WhyUsDark = () => {
@@ -29,8 +30,8 @@ const WhyUsDark = () => {
         <div className="space-y-0">
           {diffs.map((d) => (
             <div key={d.title} className="flex gap-5 py-5 border-b border-white/[0.07] animate-on-scroll">
-              <div className="w-11 h-11 rounded-lg bg-gold/10 border border-gold/20 flex items-center justify-center text-xl shrink-0">
-                {d.icon}
+              <div className="w-11 h-11 rounded-lg bg-gold/10 border border-gold/20 flex items-center justify-center shrink-0">
+                <d.Icon className="w-5 h-5 text-gold" />
               </div>
               <div>
                 <h4 className="text-white text-[15px] font-bold">{d.title}</h4>

@@ -1,6 +1,13 @@
+import { ShieldCheck, MessageCircle, Landmark } from "lucide-react";
 import havanaHero from "@/assets/havana-hero.jpg";
 import consularService from "@/assets/consular-service.jpg";
 import HeroPricing from "./HeroPricing";
+
+const trustItems = [
+  { Icon: ShieldCheck, label: "Secure Checkout" },
+  { Icon: MessageCircle, label: "Support Available" },
+  { Icon: Landmark, label: "Serving U.S. Travelers Since 1999" },
+];
 
 const HeroSection = () => (
   <section className="bg-navy relative overflow-hidden">
@@ -12,7 +19,6 @@ const HeroSection = () => (
     <div className="absolute inset-0" style={{ backgroundImage: "radial-gradient(ellipse at 70% 40%, rgba(201,168,76,0.12), transparent 60%)" }} />
 
     <div className="relative z-10 px-[6%] py-16 lg:py-20">
-      {/* Top hero text */}
       <div className="text-center max-w-3xl mx-auto mb-12">
         <h1 className="font-display font-bold text-white leading-[1.1] mb-4 lg:text-[clamp(28px,3.8vw,52px)] text-2xl">
           Trusted by U.S. Travelers Since 1999
@@ -22,26 +28,22 @@ const HeroSection = () => (
         </p>
         <p className="text-[13px] text-white/40 italic">We are not a government agency.</p>
 
-        {/* Trust Row */}
         <div className="flex flex-wrap justify-center gap-8 mt-8">
-          {[["🔒", "Secure Checkout"], ["💬", "Support Available"], ["🏛️", "Serving U.S. Travelers Since 1999"]].map(([icon, label]) => (
+          {trustItems.map(({ Icon, label }) => (
             <div key={label} className="flex items-center gap-2">
-              <span className="text-xl">{icon}</span>
+              <Icon className="w-5 h-5 text-gold" />
               <span className="text-[13px] text-white/60 font-medium">{label}</span>
             </div>
           ))}
         </div>
 
-        {/* CTAs */}
         <div className="flex flex-wrap justify-center gap-4 mt-8">
           <a href="/apply?plan=standard" className="btn-gold">Apply for Cuba E-Visa</a>
           <a href="#services" className="btn-ghost-gold">Passport & Consular Services</a>
         </div>
       </div>
 
-      {/* Image + Pricing cards */}
       <div className="flex items-start gap-8 max-w-6xl mx-auto shadow-none">
-        {/* Left: Consular image */}
         <div className="hidden lg:block flex-shrink-0 w-[280px]">
           <img
             src={consularService}
@@ -50,7 +52,6 @@ const HeroSection = () => (
           />
           <p className="text-center text-white/40 text-[11px] mt-3 italic">Consular Authorization Documentation</p>
         </div>
-        {/* Right: Pricing */}
         <div className="flex-1">
           <HeroPricing />
         </div>
