@@ -154,7 +154,7 @@ When you apply through Cuba Travel Services, our team helps you select the corre
     readTime: "5 min read",
     content: `## What Is the D'Viajeros Form?
 
-The D'Viajeros (short for Declaración de Viajero) is Cuba's mandatory digital health and customs declaration form. Every traveler — regardless of nationality — must complete and submit this form before departing for Cuba.
+The D'Viajeros (short for Declaración de Viajero or Traveler's Declaration) is Cuba's mandatory digital health and customs declaration form. Every traveler — regardless of nationality — must complete and submit this form before departing for Cuba. Every traveler — regardless of nationality — must complete and submit this form before departing for Cuba.
 
 ## Is It the Same as the Cuba E-Visa?
 
