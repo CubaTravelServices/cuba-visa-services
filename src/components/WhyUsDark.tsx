@@ -20,7 +20,7 @@ const WhyUsDark = () => {
         <div className="animate-on-scroll">
           <p className="eyebrow">Why Choose Us</p>
           <h2 className="font-display text-4xl lg:text-5xl font-bold text-white mb-4">
-            Why Choose Cuba Visa Services
+            Why Choose Cuba Travel Services
           </h2>
           <p className="text-white/50 mb-8 leading-relaxed">
             Authorized Cuba documentation services with direct consular coordination, airport staff, and 25+ years of regulatory experience.

@@ -19,7 +19,7 @@ const MissionSection = () => {
             Committed to Lawful Travel & Documentation
           </h2>
           <p className="text-slate-brand max-w-2xl mx-auto leading-relaxed">
-            Since 1999, Cuba Visa Services has been dedicated to facilitating compliant travel documentation and supporting Cuban families through authorized consular services.
+            Since 1999, Cuba Travel Services has been dedicated to facilitating compliant travel documentation and supporting Cuban families through authorized consular services.
           </p>
         </div>
         <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
