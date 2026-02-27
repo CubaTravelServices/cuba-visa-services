@@ -271,24 +271,20 @@ Apply online through an authorized provider like Cuba Travel Services. Choose St
 Several major US airlines operate regular service to Cuba, primarily to José Martí International Airport (HAV) in Havana:
 
 ### American Airlines
-- **Route:** Miami (MIA) → Havana (HAV)
-- **Frequency:** Multiple daily flights
-- **Hub advantage:** Largest Cuba operation from the US
-- **Cuba Travel Services:** Physical staff present at MIA for AA passengers
+
+Cuba Travel Services staff available at Miami International Airport (MIA) to assist passengers.
 
 ### Delta Air Lines
-- **Route:** Miami (MIA) → Havana (HAV)
-- **Frequency:** Daily service
-- **Cuba Travel Services:** Staff available at MIA for Delta passengers
+
+Cuba Travel Services staff available at MIA to assist passengers.
 
 ### Southwest Airlines
-- **Route:** Tampa (TPA) → Havana (HAV)
-- **Frequency:** Regular service
-- **Cuba Travel Services:** Staff present at TPA — the only visa service at Southwest's Tampa Cuba operation
 
-### JetBlue Airways
-- **Route:** Houston (IAH) → Havana (HAV) and other select U.S. gateways
-- **Hub advantage:** Major U.S. gateway for Cuba travel
+Express E-Visa QR code support and documentation assistance available.
+
+### United Airlines
+
+Documentation support available for departing passengers.
 
 ## What to Expect at Check-In
 
