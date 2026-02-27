@@ -43,17 +43,21 @@ const HeroSection = () => (
         </div>
       </div>
 
-      <div className="flex items-start gap-8 max-w-6xl mx-auto shadow-none">
-        <div className="hidden lg:block flex-shrink-0 w-[280px]">
+      <div className="max-w-5xl mx-auto">
+        <HeroPricing />
+      </div>
+
+      <div className="flex justify-center mt-10">
+        <div className="flex items-center gap-4 bg-white/[0.04] border border-white/10 rounded-xl px-6 py-4">
           <img
             src={consularService}
             alt="Cuba visa document with Republic of Cuba consular stamp and passport"
-            className="rounded-xl shadow-[0_20px_60px_rgba(0,0,0,0.4)] border border-white/10"
+            className="w-16 h-16 rounded-lg object-cover border border-white/10"
           />
-          <p className="text-center text-white/40 text-[11px] mt-3 italic">Consular Authorization Documentation</p>
-        </div>
-        <div className="flex-1">
-          <HeroPricing />
+          <div>
+            <p className="text-white/70 text-sm font-medium">Consular Authorization Documentation</p>
+            <p className="text-white/40 text-[12px]">Direct coordination with the Cuban Consulate</p>
+          </div>
         </div>
       </div>
     </div>
