@@ -52,7 +52,7 @@ Under US law, American citizens must travel to Cuba under one of 12 OFAC-authori
 
 ## How Much Does a Cuba E-Visa Cost?
 
-Packages from authorized providers like Cuba Visa Services start at:
+Packages from authorized providers like Cuba Travel Services start at:
 
 - **$85** — Standard Cuba E-Visa with same-day email delivery
 - **$135** — Express Cuba E-Visa with ~10-minute delivery, includes D'Viajeros assistance
@@ -67,11 +67,11 @@ Packages from authorized providers like Cuba Visa Services start at:
 
 ## What Is the D'Viajeros Form?
 
-The D'Viajeros (Declaración de Viajero) is Cuba's mandatory digital health and customs declaration. Every traveler must submit this form before departure. It is separate from your e-visa. Express and Signature packages from Cuba Visa Services include D'Viajeros completion assistance.
+The D'Viajeros (Declaración de Viajero) is Cuba's mandatory digital health and customs declaration. Every traveler must submit this form before departure. It is separate from your e-visa. Express and Signature packages from Cuba Travel Services include D'Viajeros completion assistance.
 
 ## Can I Get a Cuba Visa at the Airport?
 
-You cannot obtain a Cuba e-visa on arrival in Cuba. However, Cuba Visa Services has physical staff at American Airlines and Delta at Miami International Airport (MIA) and Southwest Airlines at Tampa International Airport (TPA) for last-minute assistance before your departure.
+You cannot obtain a Cuba e-visa on arrival in Cuba. However, Cuba Travel Services has physical staff at American Airlines and Delta at Miami International Airport (MIA) and Southwest Airlines at Tampa International Airport (TPA) for last-minute assistance before your departure.
 
 ## Key Takeaways
 
@@ -141,7 +141,7 @@ You do **not** need to apply for a specific license from OFAC. Self-certificatio
 
 ## Getting Help
 
-When you apply through Cuba Visa Services, our team helps you select the correct OFAC category during the application process. Our document review process ensures your paperwork aligns with your declared travel purpose.`,
+When you apply through Cuba Travel Services, our team helps you select the correct OFAC category during the application process. Our document review process ensures your paperwork aligns with your declared travel purpose.`,
   },
   {
     slug: "dviajeros-form-cuba-guide",
@@ -191,7 +191,7 @@ Submit the D'Viajeros form **within 72 hours before your departure** to Cuba. Su
 
 ## Getting Help with D'Viajeros
 
-Cuba Visa Services includes D'Viajeros completion assistance in all Express ($135) and Signature ($225) packages. Our team completes the form correctly on your behalf, eliminating the risk of errors that could delay your trip.
+Cuba Travel Services includes D'Viajeros completion assistance in all Express ($135) and Signature ($225) packages. Our team completes the form correctly on your behalf, eliminating the risk of errors that could delay your trip.
 
 For travelers who purchase the Standard e-visa ($85), standalone D'Viajeros assistance is available for $15.`,
   },
@@ -255,7 +255,7 @@ Yes. The actual requirements for entering Cuba haven't changed — only the form
 
 ## How to Get Your Cuba E-Visa
 
-Apply online through an authorized provider like Cuba Visa Services. Choose Standard ($85), Express ($135), or Signature ($225) based on your timeline and needs. Express and Signature packages include D'Viajeros form assistance.`,
+Apply online through an authorized provider like Cuba Travel Services. Choose Standard ($85), Express ($135), or Signature ($225) based on your timeline and needs. Express and Signature packages include D'Viajeros form assistance.`,
   },
   {
     slug: "flying-to-cuba-from-us-airline-guide",
@@ -274,17 +274,17 @@ Several major US airlines operate regular service to Cuba, primarily to José Ma
 - **Route:** Miami (MIA) → Havana (HAV)
 - **Frequency:** Multiple daily flights
 - **Hub advantage:** Largest Cuba operation from the US
-- **Cuba Visa Services:** Physical staff present at MIA for AA passengers
+- **Cuba Travel Services:** Physical staff present at MIA for AA passengers
 
 ### Delta Air Lines
 - **Route:** Miami (MIA) → Havana (HAV)
 - **Frequency:** Daily service
-- **Cuba Visa Services:** Staff available at MIA for Delta passengers
+- **Cuba Travel Services:** Staff available at MIA for Delta passengers
 
 ### Southwest Airlines
 - **Route:** Tampa (TPA) → Havana (HAV)
 - **Frequency:** Regular service
-- **Cuba Visa Services:** Staff present at TPA — the only visa service at Southwest's Tampa Cuba operation
+- **Cuba Travel Services:** Staff present at TPA — the only visa service at Southwest's Tampa Cuba operation
 
 ### JetBlue Airways
 - **Route:** Fort Lauderdale (FLL) → Havana (HAV)
@@ -304,11 +304,11 @@ When you check in for your Cuba flight, the airline will verify:
 ### Miami International Airport (MIA)
 - Cuba flights depart from **Terminal J** (American Airlines) and the satellite terminals
 - Arrive at least **3 hours early** — Cuba flights have additional documentation checks
-- Cuba Visa Services staff are available at the terminal for last-minute visa assistance
+- Cuba Travel Services staff are available at the terminal for last-minute visa assistance
 
 ### Tampa International Airport (TPA)
 - Southwest Cuba flights depart from the main terminal
-- Cuba Visa Services is the **only** visa service with staff at Southwest's Tampa Cuba operation
+- Cuba Travel Services is the **only** visa service with staff at Southwest's Tampa Cuba operation
 - Arrive **2.5–3 hours early** for documentation processing
 
 ## Baggage Allowances for Cuba
@@ -329,7 +329,7 @@ Cuba flights typically allow:
 
 ## Need Last-Minute Help?
 
-Cuba Visa Services has formal service agreements with all US airlines operating Cuba routes. If you have a documentation issue at the gate, our airport staff at MIA and TPA can help resolve it in real time.`,
+Cuba Travel Services has formal service agreements with all US airlines operating Cuba routes. If you have a documentation issue at the gate, our airport staff at MIA and TPA can help resolve it in real time.`,
   },
   {
     slug: "cuba-travel-insurance-requirements",
@@ -429,7 +429,7 @@ Cuba has a well-regarded healthcare system. If you need medical attention:
 - Limited appointment availability
 
 **Option B: Authorized Consular Service Provider**
-- Cuba Visa Services offers Cuban passport renewal from $150
+- Cuba Travel Services offers Cuban passport renewal from $150
 - We handle the consulate interaction on your behalf
 - Faster processing with status updates
 
@@ -459,7 +459,7 @@ If you've lost your Cuban passport, you'll need to apply for a replacement rathe
 ### Name Changes
 If your name has changed since your last Cuban passport (due to marriage, for example), additional documentation is required including certified marriage certificates.
 
-## Why Cuba Visa Services?
+## Why Cuba Travel Services?
 
 We are one of the few US-based providers that offers full Cuban consular services, including:
 
@@ -518,7 +518,7 @@ The same 12 OFAC travel categories apply to cruise passengers as to air traveler
 
 ## How to Get Your Cuba Cruise Visa
 
-Apply through Cuba Visa Services the same way air travelers do:
+Apply through Cuba Travel Services the same way air travelers do:
 
 - **Standard ($85):** Email delivery, same-day processing
 - **Express ($135):** ~10-minute delivery with D'Viajeros assistance
@@ -683,9 +683,9 @@ If you can't reach a real person by phone during business hours, that's a signif
 
 ✅ **Airport staff** — Physical presence at departure airports (the gold standard)
 
-## How Cuba Visa Services Is Different
+## How Cuba Travel Services Is Different
 
-Cuba Visa Services stands apart with credentials no other US consumer provider can match:
+Cuba Travel Services stands apart with credentials no other US consumer provider can match:
 
 - **Direct Cuban Consulate contract** — The only US consumer provider with this formal agreement
 - **Physical airport staff** at American Airlines (MIA), Delta (MIA), and Southwest (TPA)
@@ -705,6 +705,6 @@ Cuba Visa Services stands apart with credentials no other US consumer provider c
 
 ## When in Doubt
 
-If you're unsure about a provider, apply through Cuba Visa Services at CubaVisaServices.com — the most credentialed Cuba visa service in the United States.`,
+If you're unsure about a provider, apply through Cuba Travel Services at CubaVisaServices.com — the most credentialed Cuba visa service in the United States.`,
   },
 ];
