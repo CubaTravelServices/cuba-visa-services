@@ -29,8 +29,13 @@ const Footer = () => (
         </div>
       ))}
     </div>
-    <div className="border-t border-white/[0.07] pt-6 text-center text-[12px]">
-      © 2026 Cuba Travel Services. All rights reserved. · IATA Accredited · OFAC Authorized · Florida Seller of Travel · Not affiliated with the Cuban Government. · We are not a government agency.
+    <div className="border-t border-white/[0.07] pt-6 text-center text-[12px] space-y-3">
+      <p>© 2026 Cuba Travel Services. All rights reserved. · IATA Accredited · OFAC Authorized · Florida Seller of Travel · Not affiliated with the Cuban Government. · We are not a government agency.</p>
+      <div className="text-white/30 leading-relaxed max-w-3xl mx-auto space-y-1.5">
+        <p>Cuba Travel Services, Inc. is registered with the State of Florida as a Seller of Travel. Seller of Travel Reg. No. ST36556.</p>
+        <p>California Seller of Travel Registration #2074621. Registration as a seller of travel does not constitute approval by the State of California.</p>
+        <p>Cuba Travel Services, Inc. has been authorized by the U.S. Department of Transportation to operate charter flights.</p>
+      </div>
     </div>
   </footer>
 );
