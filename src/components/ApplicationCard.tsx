@@ -61,7 +61,7 @@ const ApplicationCard = () => {
   const [addExpress, setAddExpress] = useState(false);
 
   const basePrice = PACKAGES.find((p) => p.key === selectedPackage)?.price || 85;
-  const total = basePrice + (addDviajeros ? 25 : 0) + (addExpress ? 25 : 0);
+  const total = basePrice + (addDviajeros ? 19 : 0) + (addExpress ? 25 : 0);
 
   const selectClass = "w-full bg-ivory border border-ivory-mid rounded px-3 py-2.5 text-sm text-navy focus:outline-none focus:border-gold transition-colors";
   const labelClass = "block text-[11px] font-semibold uppercase tracking-[0.08em] text-slate-brand mb-1.5";
@@ -141,7 +141,7 @@ const ApplicationCard = () => {
               <div className="flex-1">
                 <div className="flex items-center justify-between">
                   <span className="text-sm font-semibold text-navy">D'Viajeros Assistance</span>
-                  <span className="text-sm font-bold text-gold">+$25.00</span>
+                   <span className="text-sm font-bold text-gold">+$19.00</span>
                 </div>
                 <p className="text-[12px] text-slate-brand mt-0.5">We complete Cuba's mandatory health & customs form for you</p>
               </div>

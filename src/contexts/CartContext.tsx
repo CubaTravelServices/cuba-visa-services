@@ -9,7 +9,7 @@ export interface CartItem {
   travelers: number;
 }
 
-const ADD_ON_PRICES = { dviajeros: 25, expressProcessing: 25 };
+const ADD_ON_PRICES = { dviajeros: 19, expressProcessing: 25 };
 
 function itemTotal(item: CartItem) {
   const addOnCost =
