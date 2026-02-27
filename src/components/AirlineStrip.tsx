@@ -2,7 +2,7 @@ const airlines = [
   { name: "American Airlines", airport: "Miami International (MIA)" },
   { name: "Delta Air Lines", airport: "Miami International (MIA)" },
   { name: "Southwest Airlines", airport: "All Cuba Routes" },
-  { name: "JetBlue Airways", airport: "All Cuba Routes" },
+  { name: "United Airlines", airport: "All Cuba Routes" },
   { name: "+ All US Carriers", airport: "Service agreements with all airlines" },
 ];
 
