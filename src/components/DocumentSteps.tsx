@@ -112,7 +112,7 @@ const DocumentSteps = () => {
       {/* Important notice */}
       <div className="max-w-4xl mx-auto mt-10 bg-navy rounded-lg p-5 text-center animate-on-scroll">
         <p className="text-[11px] uppercase tracking-wider font-bold text-gold leading-relaxed">
-          ⚠ Your E-Visa will not be accepted unless the E-Visa number &amp; "Dirección de Identificación, Inmigración y Extranjería" seal is included on your D'Viajeros form confirmation page
+          ⚠ Your Cuba E-Visa must be properly linked to your D'Viajeros travel declaration before departure to avoid delays at airline check-in or upon arrival.
         </p>
       </div>
     </section>
