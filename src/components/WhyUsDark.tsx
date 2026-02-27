@@ -1,11 +1,10 @@
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 
 const diffs = [
-  { icon: "🤝", title: "Direct Cuban Consulate Contract", desc: "The only US consumer provider with a formal direct agreement with the Cuban Consulate" },
-  { icon: "🏢", title: "Physical Airport Staff", desc: "Our team is physically present at American Airlines and Delta in Miami, and Southwest in Tampa" },
-  { icon: "✈️", title: "Airline Service Agreements", desc: "Formal agreements with every US carrier operating Cuba flights" },
-  { icon: "📋", title: "D'Viajeros Assistance Included", desc: "We complete Cuba's mandatory digital declaration form correctly for you" },
-  { icon: "🌐", title: "Consular Services for Cuban-Born Americans", desc: "Cuban passport renewal, birth certificates — services competitors don't offer" },
+  { icon: "🎖️", title: "25+ Years of Cuba Regulatory Experience", desc: "Deep expertise navigating Cuba's documentation requirements since 1999." },
+  { icon: "🎯", title: "Exclusively Focused on Cuba Documentation", desc: "Cuba visas, passports, and civil documents are all we do." },
+  { icon: "🤝", title: "Direct Consular Coordination", desc: "We work through official consular channels for your documentation." },
+  { icon: "🌐", title: "Mission-Driven Commitment to Constructive Engagement", desc: "Supporting Cuban families and facilitating compliant travel documentation." },
 ];
 
 const WhyUsDark = () => {
@@ -18,12 +17,12 @@ const WhyUsDark = () => {
     >
       <div className="grid lg:grid-cols-2 gap-16 max-w-6xl mx-auto">
         <div className="animate-on-scroll">
-          <p className="eyebrow">Why We're Different</p>
+          <p className="eyebrow">Why Choose Us</p>
           <h2 className="font-display text-4xl lg:text-5xl font-bold text-white mb-4">
-            The Only Full-Service Cuba Travel Provider in the US
+            Why Choose Cuba Visa Services
           </h2>
           <p className="text-white/50 mb-8 leading-relaxed">
-            No other company offers a direct consulate contract, airport staff, airline agreements, and Cuban consular services under one roof.
+            Authorized Cuba documentation services with direct consular coordination, airport staff, and 25+ years of regulatory experience.
           </p>
           <a href="#pricing" className="btn-gold">Start Your Application</a>
         </div>

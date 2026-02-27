@@ -1,13 +1,13 @@
 import { useState } from "react";
 
 const faqs = [
-  { q: "Do US citizens need a visa to travel to Cuba?", a: "Yes, all US citizens must get a Cuba e-visa before travel. It cannot be obtained on arrival. Apply online and receive it by email instantly." },
-  { q: "What is the difference between a Cuba e-visa and the old tourist card?", a: "Cuba replaced physical pink (US) and green (other nationalities) tourist cards with a fully digital e-visa. The requirements are identical — the process is now electronic." },
-  { q: "What OFAC travel categories allow Americans to visit Cuba legally?", a: "There are 12 categories including: Support for the Cuban People (most common), Family Visits, Journalism, Educational Activities, Religious Activities, Humanitarian Projects, and more. Self-certify — no license application needed." },
-  { q: "How long is a Cuba e-visa valid?", a: "30 days from entry, single-entry. Extendable by an additional 30 days inside Cuba at Inmigración. Must be used within 180 days of issuance." },
-  { q: "Can I get a Cuba visa at the airport?", a: "Not on arrival in Cuba. However, our staff is physically present at American Airlines and Delta at MIA and Southwest at TPA for last-minute assistance before departure." },
+  { q: "Is this visa accepted at the airport?", a: "Yes. Our e-visa is the authorized electronic replacement for the former paper tourist card. It is accepted by all U.S. airlines operating Cuba routes, including American Airlines, Delta, Southwest, and JetBlue." },
+  { q: "Are you authorized to process Cuba visas?", a: "Yes. We have 25+ years of experience with direct consular coordination, IATA accreditation, OFAC authorization, and Florida Seller of Travel registration. We are not a government agency." },
+  { q: "Is this the official Cuba visa?", a: "This is the authorized Cuba e-visa (also known as the Cuba Tourist Card). We coordinate through official consular channels to process your documentation. We are not a government agency." },
+  { q: "How long does processing take?", a: "Applications are typically processed within 15 minutes with our Express package. Standard processing is same-day delivery." },
+  { q: "Can U.S. citizens travel to Cuba for tourism?", a: "U.S. citizens can travel to Cuba under 12 OFAC-authorized categories. \"Support for the Cuban People\" is the most commonly used category. Self-certification only — no license application required." },
+  { q: "Do you work directly with the Cuban consulate?", a: "We coordinate through official consular channels for all Cuba documentation services. This direct coordination allows us to process applications efficiently and reliably." },
   { q: "What is the D'Viajeros form and is it required?", a: "Cuba's mandatory digital health and customs declaration (Declaración de Viajero). Required for all travelers and must be submitted before departure. Separate from your e-visa. We include assistance in Express and Signature packages." },
-  { q: "Is Cuba Visa Services an authorized and legitimate provider?", a: "Yes. Direct Cuban Consulate contract, IATA accredited, OFAC authorized, Florida Seller of Travel. Formal service agreements with all US airlines. Physical staff at 3 airports. Operating since 2009." },
 ];
 
 const FaqAccordion = () => {

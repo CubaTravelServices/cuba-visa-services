@@ -4,10 +4,10 @@ import HeroSection from "@/components/HeroSection";
 import AirlineStrip from "@/components/AirlineStrip";
 import TrustStatsBar from "@/components/TrustStatsBar";
 import HowItWorks from "@/components/HowItWorks";
-
 import WhyUsDark from "@/components/WhyUsDark";
 import AirportPresence from "@/components/AirportPresence";
 import ServicesGrid from "@/components/ServicesGrid";
+import MissionSection from "@/components/MissionSection";
 import CredentialsBar from "@/components/CredentialsBar";
 import GeoContentBlock from "@/components/GeoContentBlock";
 import ReviewsSection from "@/components/ReviewsSection";
@@ -24,10 +24,10 @@ const Index = () => (
       <AirlineStrip />
       <TrustStatsBar />
       <HowItWorks />
-      
       <WhyUsDark />
       <AirportPresence />
       <ServicesGrid />
+      <MissionSection />
       <CredentialsBar />
       <GeoContentBlock />
       <ReviewsSection />

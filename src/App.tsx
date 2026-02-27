@@ -2,7 +2,7 @@ import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import Index from "./pages/Index";
 import Apply from "./pages/Apply";
 import Process from "./pages/Process";
@@ -28,8 +28,11 @@ const App = () => (
             <Route path="/apply" element={<Apply />} />
             <Route path="/process" element={<Process />} />
             <Route path="/checkout" element={<Checkout />} />
-            <Route path="/blog" element={<BlogListing />} />
-            <Route path="/blog/:slug" element={<BlogPost />} />
+            <Route path="/insights" element={<BlogListing />} />
+            <Route path="/insights/:slug" element={<BlogPost />} />
+            {/* Redirect old blog routes to insights */}
+            <Route path="/blog" element={<Navigate to="/insights" replace />} />
+            <Route path="/blog/:slug" element={<Navigate to="/insights" replace />} />
             <Route path="/about" element={<AboutUs />} />
             <Route path="/chat" element={<Chat />} />
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}

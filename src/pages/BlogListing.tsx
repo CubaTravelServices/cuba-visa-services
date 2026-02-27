@@ -14,12 +14,12 @@ const BlogListing = () => {
           <Link to="/" className="inline-flex items-center gap-2 text-gold-light text-sm mb-6 hover:text-gold transition-colors">
             <ArrowLeft size={16} /> Back to Home
           </Link>
-          <p className="eyebrow">Cuba Travel Blog</p>
+          <p className="eyebrow">Insights</p>
           <h1 className="font-display text-4xl lg:text-5xl font-bold mb-4">
-            Cuba E-Visa &amp; Travel Insights
+            Cuba Visa &amp; Consular Insights
           </h1>
           <p className="text-white/60 max-w-2xl text-lg">
-            Expert guides, travel tips, and the latest updates on Cuba visa requirements, OFAC compliance, and everything US travelers need to know.
+            Expert guides, travel tips, and the latest updates on Cuba visa requirements, OFAC compliance, and everything U.S. travelers need to know.
           </p>
         </div>
       </div>
@@ -27,7 +27,7 @@ const BlogListing = () => {
       <div className="max-w-5xl mx-auto px-[6%] py-12">
         {/* Featured Post */}
         {featured && (
-          <Link to={`/blog/${featured.slug}`} className="block group mb-12">
+          <Link to={`/insights/${featured.slug}`} className="block group mb-12">
             <article className="bg-white rounded-xl border border-ivory-mid overflow-hidden card-hover">
               <div className="bg-navy p-8 lg:p-10 relative">
                 <span className="absolute top-6 right-6 bg-gold text-navy text-[10px] font-extrabold uppercase tracking-wider px-3 py-1 rounded-full">
@@ -52,7 +52,7 @@ const BlogListing = () => {
         {/* Post Grid */}
         <div className="grid md:grid-cols-2 gap-6">
           {rest.map((post) => (
-            <Link to={`/blog/${post.slug}`} key={post.slug} className="block group">
+            <Link to={`/insights/${post.slug}`} key={post.slug} className="block group">
               <article className="bg-white rounded-xl border border-ivory-mid p-7 h-full card-hover">
                 <span className="inline-flex items-center gap-1.5 text-gold text-xs font-semibold uppercase tracking-wider mb-3">
                   <Tag size={12} /> {post.category}
@@ -73,7 +73,7 @@ const BlogListing = () => {
         {/* CTA */}
         <div className="text-center mt-16 py-12 bg-navy rounded-xl" style={{ backgroundImage: "radial-gradient(ellipse at 50% 100%, rgba(201,168,76,0.1), transparent 60%)" }}>
           <h2 className="font-display text-3xl font-bold text-white mb-3">Ready to Apply?</h2>
-          <p className="text-white/50 mb-6">Get your Cuba e-visa in minutes from the most trusted provider.</p>
+          <p className="text-white/50 mb-6">Get your Cuba e-visa processed through our trusted service.</p>
           <Link to="/" className="btn-gold">Apply for Your E-Visa →</Link>
         </div>
       </div>

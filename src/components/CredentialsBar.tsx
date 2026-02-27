@@ -2,7 +2,7 @@ const badges = [
   { label: "IATA Accredited", sub: "Intl. Air Transport Association" },
   { label: "OFAC Authorized", sub: "US Dept. of the Treasury" },
   { label: "Florida Seller of Travel", sub: "State of Florida" },
-  { label: "Consulate Contract", sub: "Cuban Consulate — Direct" },
+  { label: "Consular Coordination", sub: "Direct Consular Channels" },
   { label: "Airline Agreements", sub: "All US Cuba Carriers" },
 ];
 

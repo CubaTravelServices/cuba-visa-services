@@ -1,21 +1,30 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import logo from "@/assets/logo.svg";
-import { Menu, X, ShoppingBag } from "lucide-react";
+import { Menu, X, ShoppingBag, ChevronDown } from "lucide-react";
 import { useCart } from "@/contexts/CartContext";
 import CartDrawer from "@/components/CartDrawer";
 
+const visaDropdownItems = [
+  { label: "Travel to Cuba (E-Visa)", href: "/apply?plan=standard" },
+  { label: "Cuban Passport Services", href: "#services" },
+  { label: "Birth Certificates & Civil Documents", href: "#services" },
+  { label: "Help / FAQs", href: "#faq" },
+];
+
 const navLinks = [
-  { label: "Application Process", href: "/process" },
+  { label: "Visas & Consular Services", href: "#", dropdown: true },
   { label: "Airport Locations", href: "#airports" },
-  { label: "Visa Blog", href: "/blog" },
+  { label: "Insights", href: "/insights" },
   { label: "Travel Services", href: "https://CubaTravelServices.com", external: true },
   { label: "About Us", href: "/about" },
-  { label: "FAQ", href: "#faq" },
 ];
 
 const Navbar = () => {
   const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
+  const [dropdownOpen, setDropdownOpen] = useState(false);
+  const [mobileDropdownOpen, setMobileDropdownOpen] = useState(false);
+  const dropdownRef = useRef<HTMLDivElement>(null);
   const { itemCount, setDrawerOpen } = useCart();
 
   useEffect(() => {
@@ -24,11 +33,21 @@ const Navbar = () => {
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
-  // Lock body scroll when menu is open
   useEffect(() => {
     document.body.style.overflow = menuOpen ? "hidden" : "";
     return () => { document.body.style.overflow = ""; };
   }, [menuOpen]);
+
+  // Close dropdown on outside click
+  useEffect(() => {
+    const handleClick = (e: MouseEvent) => {
+      if (dropdownRef.current && !dropdownRef.current.contains(e.target as Node)) {
+        setDropdownOpen(false);
+      }
+    };
+    document.addEventListener("mousedown", handleClick);
+    return () => document.removeEventListener("mousedown", handleClick);
+  }, []);
 
   return (
     <>
@@ -42,9 +61,35 @@ const Navbar = () => {
 
         {/* Desktop nav */}
         <div className="hidden md:flex items-center gap-9">
-          {navLinks.map((l) => (
-            <a key={l.href} href={l.href} {...(l.external ? { target: "_blank", rel: "noopener noreferrer" } : {})} className="text-sm font-medium text-white/80 hover:text-gold transition-colors">{l.label}</a>
-          ))}
+          {navLinks.map((l) =>
+            l.dropdown ? (
+              <div key={l.label} className="relative" ref={dropdownRef}>
+                <button
+                  onClick={() => setDropdownOpen(!dropdownOpen)}
+                  className="text-sm font-medium text-white/80 hover:text-gold transition-colors flex items-center gap-1"
+                >
+                  {l.label}
+                  <ChevronDown size={14} className={`transition-transform duration-200 ${dropdownOpen ? "rotate-180" : ""}`} />
+                </button>
+                {dropdownOpen && (
+                  <div className="absolute top-full left-0 mt-2 w-[260px] bg-white rounded-lg shadow-xl border border-ivory-mid py-2 z-50">
+                    {visaDropdownItems.map((item) => (
+                      <a
+                        key={item.label}
+                        href={item.href}
+                        onClick={() => setDropdownOpen(false)}
+                        className="block px-4 py-2.5 text-sm text-navy hover:bg-ivory-mid hover:text-gold transition-colors"
+                      >
+                        {item.label}
+                      </a>
+                    ))}
+                  </div>
+                )}
+              </div>
+            ) : (
+              <a key={l.href} href={l.href} {...(l.external ? { target: "_blank", rel: "noopener noreferrer" } : {})} className="text-sm font-medium text-white/80 hover:text-gold transition-colors">{l.label}</a>
+            )
+          )}
           <a href="/apply?plan=standard" className="btn-gold text-[12px] py-2.5 px-5">Apply Now</a>
           <button onClick={() => setDrawerOpen(true)} className="relative text-white/80 hover:text-gold transition-colors" aria-label="Open cart">
             <ShoppingBag className="h-5 w-5" />
@@ -85,7 +130,30 @@ const Navbar = () => {
         </div>
 
         <div className="flex flex-col px-6 py-8 gap-1">
-          {navLinks.map((l) => (
+          {/* Visas & Consular Services dropdown */}
+          <button
+            onClick={() => setMobileDropdownOpen(!mobileDropdownOpen)}
+            className="flex items-center justify-between text-[16px] font-medium text-navy hover:text-gold transition-colors py-3 border-b border-ivory-mid"
+          >
+            <span>Visas & Consular Services</span>
+            <ChevronDown size={16} className={`transition-transform duration-200 ${mobileDropdownOpen ? "rotate-180" : ""}`} />
+          </button>
+          {mobileDropdownOpen && (
+            <div className="pl-4 mb-1">
+              {visaDropdownItems.map((item) => (
+                <a
+                  key={item.label}
+                  href={item.href}
+                  onClick={() => setMenuOpen(false)}
+                  className="block text-[14px] text-slate-brand hover:text-gold transition-colors py-2"
+                >
+                  {item.label}
+                </a>
+              ))}
+            </div>
+          )}
+
+          {navLinks.filter(l => !l.dropdown).map((l) => (
             <a
               key={l.href}
               href={l.href}
