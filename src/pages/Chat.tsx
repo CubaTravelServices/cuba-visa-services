@@ -11,7 +11,7 @@ const CHAT_URL = `${import.meta.env.VITE_SUPABASE_URL}/functions/v1/chat`;
 
 const Chat = () => {
   const [messages, setMessages] = useState<Msg[]>([
-    { role: "assistant", content: "Hello! 👋 I'm your Cuba Visa Services assistant. How can I help you today? I can answer questions about visa applications, travel requirements, processing times, and more." },
+    { role: "assistant", content: "Hello! 👋 I'm your Cuba Travel Services assistant. How can I help you today? I can answer questions about visa applications, travel requirements, processing times, and more." },
   ]);
   const [input, setInput] = useState("");
   const [isLoading, setIsLoading] = useState(false);
@@ -127,7 +127,7 @@ const Chat = () => {
       <main className="flex-1 flex flex-col bg-ivory">
         {/* Header */}
         <div className="bg-burgundy text-white px-[6%] py-8 text-center">
-          <h1 className="font-display text-3xl font-bold mb-2">Chat with <span className="text-gold">Cuba Visa Services</span></h1>
+          <h1 className="font-display text-3xl font-bold mb-2">Chat with <span className="text-gold">Cuba Travel Services</span></h1>
           <p className="text-white/60 text-sm">Get instant answers about visas, travel requirements & more. Or call <a href="tel:+18009632822" className="text-gold hover:underline">1-800-963-2822</a></p>
         </div>
 
