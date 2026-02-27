@@ -4,6 +4,7 @@ import HeroSection from "@/components/HeroSection";
 import AirlineStrip from "@/components/AirlineStrip";
 import TrustStatsBar from "@/components/TrustStatsBar";
 import HowItWorks from "@/components/HowItWorks";
+import DocumentSteps from "@/components/DocumentSteps";
 import WhyUsDark from "@/components/WhyUsDark";
 import AirportPresence from "@/components/AirportPresence";
 import ServicesGrid from "@/components/ServicesGrid";
@@ -24,6 +25,7 @@ const Index = () => (
       <AirlineStrip />
       <TrustStatsBar />
       <HowItWorks />
+      <DocumentSteps />
       <WhyUsDark />
       <AirportPresence />
       <ServicesGrid />
