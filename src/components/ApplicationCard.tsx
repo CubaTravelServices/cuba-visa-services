@@ -8,39 +8,42 @@ const PACKAGES = [
   key: "standard",
   name: "Standard Cuba E-Visa",
   price: 85,
+  originalPrice: null as number | null,
   badge: null as string | null,
+  discount: null as string | null,
   features: [
   "Single-Entry Cuba E-Visa",
   "Valid for 90 Days from Issuance",
   "Email Delivery",
   "Document Review Included",
   "Standard Customer Support"]
-
 },
 {
   key: "express",
   name: "Express Cuba E-Visa",
-  price: 135,
+  price: 121.50,
+  originalPrice: 135,
   badge: "⭐ Most Popular",
+  discount: "10% Off",
   features: [
   "Everything in Standard, plus:",
   "Priority Customer Support",
   "15 Minute Application Processing",
   "D'Viajeros Assistance Included"]
-
 },
 {
   key: "signature",
   name: "Signature Service Cuba E-Visa",
-  price: 225,
+  price: 202.50,
+  originalPrice: 225,
   badge: null as string | null,
+  discount: "10% Off",
   features: [
   "Everything in Express, plus:",
   "VIP Immigration Processing on Arrival",
   "VIP Departure Lounge Access",
   "VIP Transfer to City Center",
   "Meet & Greet at Airport"]
-
 }];
 
 
@@ -80,7 +83,7 @@ const ApplicationCard = () => {
 
             {PACKAGES.map((pkg) =>
             <option key={pkg.key} value={pkg.key}>
-                {pkg.name} — ${pkg.price}{pkg.badge ? ` (${pkg.badge})` : ""}
+                {pkg.name} — ${pkg.price % 1 === 0 ? pkg.price : pkg.price.toFixed(2)}{pkg.originalPrice ? ` (was $${pkg.originalPrice})` : ""}{pkg.badge ? ` ${pkg.badge}` : ""}
               </option>
             )}
           </select>
@@ -164,7 +167,7 @@ const ApplicationCard = () => {
       </div>
 
       <div className="flex items-baseline justify-between mt-6 mb-4">
-        <span className="font-display text-[28px] font-bold text-navy">${total}</span>
+        <span className="font-display text-[28px] font-bold text-navy">${total % 1 === 0 ? total : total.toFixed(2)}</span>
         <span className="text-sm text-slate-brand">per traveler</span>
       </div>
 
