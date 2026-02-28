@@ -35,7 +35,7 @@ const plans = [
   key: "signature",
   name: "VIP Signature Service",
   tagline: "All Express benefits, plus optional VIP upgrades",
-  price: 388,
+  price: 388.45,
   originalPrice: 457,
   features: [
   { text: "Includes Everything From Express Package Plus:", italic: true },
