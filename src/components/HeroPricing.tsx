@@ -21,8 +21,8 @@ const plans = [
   key: "express",
   name: "Express Cuba E-Visa",
   tagline: "As fast as 10 minutes — ideal for last-minute plans",
-  price: 121.50,
-  originalPrice: 135,
+  price: 116.10,
+  originalPrice: 129,
   features: [
   { text: "Includes Everything From Standard Package Plus:", italic: true },
   "Priority Customer Support",
