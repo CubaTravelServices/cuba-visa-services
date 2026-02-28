@@ -35,8 +35,8 @@ const plans = [
   key: "signature",
   name: "Signature Service Cuba E-Visa",
   tagline: "All Express benefits, plus optional VIP upgrades",
-  price: 202.50,
-  originalPrice: 225,
+  price: 388.45,
+  originalPrice: 457,
   features: [
   { text: "Includes Everything From Express Package Plus:", italic: true },
   { text: "VIP Immigration Processing on Arrival", bold: true },
@@ -44,7 +44,7 @@ const plans = [
   "VIP Transfer to City Center",
   "Meet & Greet at Airport"],
   popular: false,
-  discount: "10% Off"
+  discount: "15% OFF"
 }];
 
 const HeroPricing = () => {
