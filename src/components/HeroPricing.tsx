@@ -21,7 +21,7 @@ const plans = [
   key: "express",
   name: "Express Cuba E-Visa",
   tagline: "As fast as 10 minutes — ideal for last-minute plans",
-  price: 116.10,
+  price: 116,
   originalPrice: 129,
   features: [
   { text: "Includes Everything From Standard Package Plus:", italic: true },
@@ -35,7 +35,7 @@ const plans = [
   key: "signature",
   name: "VIP Signature Service",
   tagline: "All Express benefits, plus optional VIP upgrades",
-  price: 388.45,
+  price: 388,
   originalPrice: 457,
   features: [
   { text: "Includes Everything From Express Package Plus:", italic: true },
