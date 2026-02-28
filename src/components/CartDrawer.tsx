@@ -46,19 +46,31 @@ const CartDrawer = () => {
                       { key: "vipLounge" as const, label: "VIP Departure Lounge", price: ADD_ON_PRICES.vipLounge },
                       { key: "vipTransfer" as const, label: "Private Transfer to City Center", price: ADD_ON_PRICES.vipTransfer },
                       { key: "meetAndGreet" as const, label: "Meet & Greet at Both Airports", price: ADD_ON_PRICES.meetAndGreet },
-                    ].map((addon) => (
-                      <div key={addon.key} className="flex items-center justify-between">
-                        <div>
-                          <p className="text-xs font-semibold text-navy">{addon.label}</p>
-                          <p className="text-[10px] text-slate-brand">{addon.sub ? `${addon.sub} · ` : ""}+${addon.price}/traveler</p>
+                    ].map((addon) => {
+                      const isSignature = item.packageKey === "signature";
+                      const isExpressIncluded = item.packageKey === "express" && (addon.key === "dviajeros" || addon.key === "expressProcessing");
+                      const isIncluded = isSignature || isExpressIncluded;
+
+                      return (
+                        <div key={addon.key} className="flex items-center justify-between">
+                          <div>
+                            <p className="text-xs font-semibold text-navy">{addon.label}</p>
+                            {isIncluded ? (
+                              <p className="text-[10px] text-gold font-semibold">Included</p>
+                            ) : (
+                              <p className="text-[10px] text-slate-brand">{addon.sub ? `${addon.sub} · ` : ""}+${addon.price}/traveler</p>
+                            )}
+                          </div>
+                          {!isIncluded && (
+                            <Switch
+                              checked={item.addOns[addon.key]}
+                              onCheckedChange={() => toggleAddOn(item.id, addon.key)}
+                              className="data-[state=checked]:bg-gold"
+                            />
+                          )}
                         </div>
-                        <Switch
-                          checked={item.addOns[addon.key]}
-                          onCheckedChange={() => toggleAddOn(item.id, addon.key)}
-                          className="data-[state=checked]:bg-gold"
-                        />
-                      </div>
-                    ))}
+                      );
+                    })}
                   </div>
 
                   {/* Travelers */}
