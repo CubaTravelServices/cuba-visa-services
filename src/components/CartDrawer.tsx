@@ -44,8 +44,8 @@ const CartDrawer = () => {
                       { key: "expressProcessing" as const, label: "Express Processing", price: ADD_ON_PRICES.expressProcessing, sub: "As fast as 15 min" },
                       { key: "vipImmigration" as const, label: "VIP Immigration Processing", price: ADD_ON_PRICES.vipImmigration },
                       { key: "vipLounge" as const, label: "VIP Departure Lounge", price: ADD_ON_PRICES.vipLounge },
-                      { key: "vipTransfer" as const, label: "VIP Transfer to City Center", price: ADD_ON_PRICES.vipTransfer },
-                      { key: "meetAndGreet" as const, label: "Meet & Greet at Airports", price: ADD_ON_PRICES.meetAndGreet },
+                      { key: "vipTransfer" as const, label: "Private Transfer to City Center", price: ADD_ON_PRICES.vipTransfer },
+                      { key: "meetAndGreet" as const, label: "Meet & Greet at Both Airports", price: ADD_ON_PRICES.meetAndGreet },
                     ].map((addon) => (
                       <div key={addon.key} className="flex items-center justify-between">
                         <div>

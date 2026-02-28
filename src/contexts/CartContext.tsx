@@ -19,10 +19,10 @@ export interface CartItem {
 const ADD_ON_PRICES = {
   dviajeros: 19,
   expressProcessing: 25,
-  vipImmigration: 75,
-  vipLounge: 75,
-  vipTransfer: 72,
-  meetAndGreet: 105,
+  vipImmigration: 68,
+  vipLounge: 70,
+  vipTransfer: 65,
+  meetAndGreet: 125,
 };
 
 function itemTotal(item: CartItem) {
