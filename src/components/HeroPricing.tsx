@@ -11,7 +11,7 @@ const plans = [
   features: [
   "Single-Entry Cuba E-Visa",
   "Valid for 90 Days from Issuance",
-  "Email Delivery",
+  "48 Hour Application Processing",
   "Document Review Included",
   "Standard Customer Support"],
   popular: false,
