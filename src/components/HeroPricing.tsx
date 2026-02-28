@@ -77,6 +77,11 @@ const HeroPricing = () => {
             ★ Most Popular
           </span>
         }
+        {plan.key === "signature" &&
+        <span className="absolute -top-3.5 left-1/2 -translate-x-1/2 bg-emerald-500 text-white text-[11px] font-extrabold uppercase tracking-wider px-4 py-1 rounded-full shadow">
+            🎁 Bundle & Save
+          </span>
+        }
         <h3 className="font-display text-[16px] font-bold text-navy min-h-[56px]">{plan.name}</h3>
         <p className="text-[13px] min-h-[40px] mt-1 text-slate-brand">{plan.tagline}</p>
         <div className="mt-4 mb-1 min-h-[68px] flex items-end">
