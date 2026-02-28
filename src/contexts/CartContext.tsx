@@ -5,16 +5,31 @@ export interface CartItem {
   packageKey: "standard" | "express" | "signature";
   packageName: string;
   basePrice: number;
-  addOns: { dviajeros: boolean; expressProcessing: boolean };
+  addOns: {
+    dviajeros: boolean;
+    expressProcessing: boolean;
+    vipImmigration: boolean;
+    vipLounge: boolean;
+    vipTransfer: boolean;
+    meetAndGreet: boolean;
+  };
   travelers: number;
 }
 
-const ADD_ON_PRICES = { dviajeros: 19, expressProcessing: 25 };
+const ADD_ON_PRICES = {
+  dviajeros: 19,
+  expressProcessing: 25,
+  vipImmigration: 75,
+  vipLounge: 75,
+  vipTransfer: 72,
+  meetAndGreet: 105,
+};
 
 function itemTotal(item: CartItem) {
-  const addOnCost =
-    (item.addOns.dviajeros ? ADD_ON_PRICES.dviajeros : 0) +
-    (item.addOns.expressProcessing ? ADD_ON_PRICES.expressProcessing : 0);
+  const addOnCost = Object.entries(item.addOns).reduce(
+    (sum, [key, enabled]) => sum + (enabled ? ADD_ON_PRICES[key as keyof typeof ADD_ON_PRICES] : 0),
+    0
+  );
   return (item.basePrice + addOnCost) * item.travelers;
 }
 
@@ -23,7 +38,7 @@ interface CartContextType {
   addItem: (item: Omit<CartItem, "id">) => void;
   removeItem: (id: string) => void;
   updateTravelers: (id: string, travelers: number) => void;
-  toggleAddOn: (id: string, addOn: "dviajeros" | "expressProcessing") => void;
+  toggleAddOn: (id: string, addOn: keyof CartItem["addOns"]) => void;
   clearCart: () => void;
   cartTotal: number;
   itemCount: number;
@@ -53,7 +68,7 @@ export const CartProvider = ({ children }: { children: ReactNode }) => {
     );
   }, []);
 
-  const toggleAddOn = useCallback((id: string, addOn: "dviajeros" | "expressProcessing") => {
+  const toggleAddOn = useCallback((id: string, addOn: keyof CartItem["addOns"]) => {
     setItems((prev) =>
       prev.map((i) =>
         i.id === id ? { ...i, addOns: { ...i.addOns, [addOn]: !i.addOns[addOn] } } : i

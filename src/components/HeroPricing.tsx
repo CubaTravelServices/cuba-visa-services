@@ -56,7 +56,7 @@ const HeroPricing = () => {
       packageKey: plan.key as "standard" | "express" | "signature",
       packageName: plan.name,
       basePrice: plan.price,
-      addOns: { dviajeros: plan.key !== "standard", expressProcessing: false },
+      addOns: { dviajeros: plan.key !== "standard", expressProcessing: false, vipImmigration: false, vipLounge: false, vipTransfer: false, meetAndGreet: false },
       travelers: 1,
     });
   };
