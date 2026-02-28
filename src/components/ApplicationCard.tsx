@@ -65,7 +65,7 @@ const ApplicationCard = () => {
   const [addMeetAndGreet, setAddMeetAndGreet] = useState(false);
 
   const basePrice = PACKAGES.find((p) => p.key === selectedPackage)?.price || 85;
-  const total = basePrice + (addDviajeros ? 19 : 0) + (addExpress ? 25 : 0) + (addVipImmigration ? 75 : 0) + (addVipLounge ? 75 : 0) + (addVipTransfer ? 72 : 0) + (addMeetAndGreet ? 105 : 0);
+  const total = basePrice + (addDviajeros ? 19 : 0) + (addExpress ? 25 : 0) + (addVipImmigration ? 68 : 0) + (addVipLounge ? 70 : 0) + (addVipTransfer ? 65 : 0) + (addMeetAndGreet ? 125 : 0);
 
   const selectClass = "w-full bg-ivory border border-ivory-mid rounded px-3 py-2.5 text-sm text-navy focus:outline-none focus:border-gold transition-colors";
   const labelClass = "block text-[11px] font-semibold uppercase tracking-[0.08em] text-slate-brand mb-1.5";
@@ -163,9 +163,9 @@ const ApplicationCard = () => {
               <div className="flex-1">
                 <div className="flex items-center justify-between">
                   <span className="text-sm font-semibold text-navy">VIP Immigration Processing on Arrival</span>
-                  <span className="text-sm font-bold text-gold">+$75.00</span>
-                </div>
-                <p className="text-[12px] text-slate-brand mt-0.5">Skip the lines with priority immigration clearance</p>
+                   <span className="text-sm font-bold text-gold">+$68.00</span>
+                 </div>
+                 <p className="text-[12px] text-slate-brand mt-0.5">Skip the lines with priority immigration clearance</p>
               </div>
             </label>
             <hr className="border-ivory-mid" />
@@ -174,9 +174,9 @@ const ApplicationCard = () => {
               <div className="flex-1">
                 <div className="flex items-center justify-between">
                   <span className="text-sm font-semibold text-navy">VIP Departure Lounge Access</span>
-                  <span className="text-sm font-bold text-gold">+$75.00</span>
-                </div>
-                <p className="text-[12px] text-slate-brand mt-0.5">Relax in a private lounge before your departure</p>
+                   <span className="text-sm font-bold text-gold">+$70.00</span>
+                 </div>
+                 <p className="text-[12px] text-slate-brand mt-0.5">Relax in a private lounge before your departure</p>
               </div>
             </label>
             <hr className="border-ivory-mid" />
@@ -184,10 +184,10 @@ const ApplicationCard = () => {
               <Checkbox checked={addVipTransfer} onCheckedChange={(checked) => setAddVipTransfer(checked === true)} className="mt-0.5" />
               <div className="flex-1">
                 <div className="flex items-center justify-between">
-                  <span className="text-sm font-semibold text-navy">VIP Transfer to City Center (One-Way)</span>
-                  <span className="text-sm font-bold text-gold">+$72.00</span>
-                </div>
-                <p className="text-[12px] text-slate-brand mt-0.5">Private transfer from Havana airport to city center</p>
+                   <span className="text-sm font-semibold text-navy">Private Transfer to City Center</span>
+                   <span className="text-sm font-bold text-gold">+$65.00</span>
+                 </div>
+                 <p className="text-[12px] text-slate-brand mt-0.5">Private transfer from Havana airport to city center</p>
               </div>
             </label>
             <hr className="border-ivory-mid" />
@@ -195,10 +195,10 @@ const ApplicationCard = () => {
               <Checkbox checked={addMeetAndGreet} onCheckedChange={(checked) => setAddMeetAndGreet(checked === true)} className="mt-0.5" />
               <div className="flex-1">
                 <div className="flex items-center justify-between">
-                  <span className="text-sm font-semibold text-navy">Meet & Greet at Miami & Havana Airports</span>
-                  <span className="text-sm font-bold text-gold">+$105.00</span>
-                </div>
-                <p className="text-[12px] text-slate-brand mt-0.5">Personal assistance at both departure and arrival airports</p>
+                   <span className="text-sm font-semibold text-navy">Meet & Greet at Miami (Departure) & Havana (Arrival)</span>
+                   <span className="text-sm font-bold text-gold">+$125.00</span>
+                 </div>
+                 <p className="text-[12px] text-slate-brand mt-0.5">Personal assistance at both departure and arrival airports</p>
               </div>
             </label>
           </div>
