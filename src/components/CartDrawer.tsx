@@ -39,28 +39,26 @@ const CartDrawer = () => {
 
                   {/* Upsell Add-ons */}
                   <div className="space-y-2 mt-3 pt-3 border-t border-ivory-mid">
-                    <div className="flex items-center justify-between">
-                      <div>
-                        <p className="text-xs font-semibold text-navy">D'Viajeros Assistance</p>
-                        <p className="text-[10px] text-slate-brand">+${ADD_ON_PRICES.dviajeros}/traveler</p>
+                    {[
+                      { key: "dviajeros" as const, label: "D'Viajeros Assistance", price: ADD_ON_PRICES.dviajeros },
+                      { key: "expressProcessing" as const, label: "Express Processing", price: ADD_ON_PRICES.expressProcessing, sub: "As fast as 15 min" },
+                      { key: "vipImmigration" as const, label: "VIP Immigration Processing", price: ADD_ON_PRICES.vipImmigration },
+                      { key: "vipLounge" as const, label: "VIP Departure Lounge", price: ADD_ON_PRICES.vipLounge },
+                      { key: "vipTransfer" as const, label: "VIP Transfer to City Center", price: ADD_ON_PRICES.vipTransfer },
+                      { key: "meetAndGreet" as const, label: "Meet & Greet at Airports", price: ADD_ON_PRICES.meetAndGreet },
+                    ].map((addon) => (
+                      <div key={addon.key} className="flex items-center justify-between">
+                        <div>
+                          <p className="text-xs font-semibold text-navy">{addon.label}</p>
+                          <p className="text-[10px] text-slate-brand">{addon.sub ? `${addon.sub} · ` : ""}+${addon.price}/traveler</p>
+                        </div>
+                        <Switch
+                          checked={item.addOns[addon.key]}
+                          onCheckedChange={() => toggleAddOn(item.id, addon.key)}
+                          className="data-[state=checked]:bg-gold"
+                        />
                       </div>
-                      <Switch
-                        checked={item.addOns.dviajeros}
-                        onCheckedChange={() => toggleAddOn(item.id, "dviajeros")}
-                        className="data-[state=checked]:bg-gold"
-                      />
-                    </div>
-                    <div className="flex items-center justify-between">
-                      <div>
-                        <p className="text-xs font-semibold text-navy">Express Processing</p>
-                        <p className="text-[10px] text-slate-brand">As fast as 15 min · +${ADD_ON_PRICES.expressProcessing}/traveler</p>
-                      </div>
-                      <Switch
-                        checked={item.addOns.expressProcessing}
-                        onCheckedChange={() => toggleAddOn(item.id, "expressProcessing")}
-                        className="data-[state=checked]:bg-gold"
-                      />
-                    </div>
+                    ))}
                   </div>
 
                   {/* Travelers */}

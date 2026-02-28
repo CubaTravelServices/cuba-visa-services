@@ -59,9 +59,13 @@ const ApplicationCard = () => {
   const [airline, setAirline] = useState("American Airlines");
   const [addDviajeros, setAddDviajeros] = useState(false);
   const [addExpress, setAddExpress] = useState(false);
+  const [addVipImmigration, setAddVipImmigration] = useState(false);
+  const [addVipLounge, setAddVipLounge] = useState(false);
+  const [addVipTransfer, setAddVipTransfer] = useState(false);
+  const [addMeetAndGreet, setAddMeetAndGreet] = useState(false);
 
   const basePrice = PACKAGES.find((p) => p.key === selectedPackage)?.price || 85;
-  const total = basePrice + (addDviajeros ? 19 : 0) + (addExpress ? 25 : 0);
+  const total = basePrice + (addDviajeros ? 19 : 0) + (addExpress ? 25 : 0) + (addVipImmigration ? 75 : 0) + (addVipLounge ? 75 : 0) + (addVipTransfer ? 72 : 0) + (addMeetAndGreet ? 105 : 0);
 
   const selectClass = "w-full bg-ivory border border-ivory-mid rounded px-3 py-2.5 text-sm text-navy focus:outline-none focus:border-gold transition-colors";
   const labelClass = "block text-[11px] font-semibold uppercase tracking-[0.08em] text-slate-brand mb-1.5";
@@ -133,32 +137,68 @@ const ApplicationCard = () => {
           <label className={labelClass}>Add-Ons</label>
           <div className="space-y-3 bg-ivory border border-ivory-mid rounded p-4">
             <label className="flex items-start gap-3 cursor-pointer">
-              <Checkbox
-                checked={addDviajeros}
-                onCheckedChange={(checked) => setAddDviajeros(checked === true)}
-                className="mt-0.5" />
-
+              <Checkbox checked={addDviajeros} onCheckedChange={(checked) => setAddDviajeros(checked === true)} className="mt-0.5" />
               <div className="flex-1">
                 <div className="flex items-center justify-between">
                   <span className="text-sm font-semibold text-navy">D'Viajeros Assistance</span>
-                   <span className="text-sm font-bold text-gold">+$19.00</span>
+                  <span className="text-sm font-bold text-gold">+$19.00</span>
                 </div>
                 <p className="text-[12px] text-slate-brand mt-0.5">We complete Cuba's mandatory health & customs form for you</p>
               </div>
             </label>
             <hr className="border-ivory-mid" />
             <label className="flex items-start gap-3 cursor-pointer">
-              <Checkbox
-                checked={addExpress}
-                onCheckedChange={(checked) => setAddExpress(checked === true)}
-                className="mt-0.5" />
-
+              <Checkbox checked={addExpress} onCheckedChange={(checked) => setAddExpress(checked === true)} className="mt-0.5" />
               <div className="flex-1">
                 <div className="flex items-center justify-between">
                   <span className="text-sm font-semibold text-navy">Express Application Processing</span>
                   <span className="text-sm font-bold text-gold">+$25.00</span>
                 </div>
                 <p className="text-[12px] text-slate-brand mt-0.5">Priority processing — e-visa delivered in ~15 minutes</p>
+              </div>
+            </label>
+            <hr className="border-ivory-mid" />
+            <label className="flex items-start gap-3 cursor-pointer">
+              <Checkbox checked={addVipImmigration} onCheckedChange={(checked) => setAddVipImmigration(checked === true)} className="mt-0.5" />
+              <div className="flex-1">
+                <div className="flex items-center justify-between">
+                  <span className="text-sm font-semibold text-navy">VIP Immigration Processing on Arrival</span>
+                  <span className="text-sm font-bold text-gold">+$75.00</span>
+                </div>
+                <p className="text-[12px] text-slate-brand mt-0.5">Skip the lines with priority immigration clearance</p>
+              </div>
+            </label>
+            <hr className="border-ivory-mid" />
+            <label className="flex items-start gap-3 cursor-pointer">
+              <Checkbox checked={addVipLounge} onCheckedChange={(checked) => setAddVipLounge(checked === true)} className="mt-0.5" />
+              <div className="flex-1">
+                <div className="flex items-center justify-between">
+                  <span className="text-sm font-semibold text-navy">VIP Departure Lounge Access</span>
+                  <span className="text-sm font-bold text-gold">+$75.00</span>
+                </div>
+                <p className="text-[12px] text-slate-brand mt-0.5">Relax in a private lounge before your departure</p>
+              </div>
+            </label>
+            <hr className="border-ivory-mid" />
+            <label className="flex items-start gap-3 cursor-pointer">
+              <Checkbox checked={addVipTransfer} onCheckedChange={(checked) => setAddVipTransfer(checked === true)} className="mt-0.5" />
+              <div className="flex-1">
+                <div className="flex items-center justify-between">
+                  <span className="text-sm font-semibold text-navy">VIP Transfer to City Center (One-Way)</span>
+                  <span className="text-sm font-bold text-gold">+$72.00</span>
+                </div>
+                <p className="text-[12px] text-slate-brand mt-0.5">Private transfer from Havana airport to city center</p>
+              </div>
+            </label>
+            <hr className="border-ivory-mid" />
+            <label className="flex items-start gap-3 cursor-pointer">
+              <Checkbox checked={addMeetAndGreet} onCheckedChange={(checked) => setAddMeetAndGreet(checked === true)} className="mt-0.5" />
+              <div className="flex-1">
+                <div className="flex items-center justify-between">
+                  <span className="text-sm font-semibold text-navy">Meet & Greet at Miami & Havana Airports</span>
+                  <span className="text-sm font-bold text-gold">+$105.00</span>
+                </div>
+                <p className="text-[12px] text-slate-brand mt-0.5">Personal assistance at both departure and arrival airports</p>
               </div>
             </label>
           </div>
@@ -174,13 +214,18 @@ const ApplicationCard = () => {
       <button
         onClick={() => {
           const pkg = PACKAGES.find((p) => p.key === selectedPackage)!;
+          const isStandard = selectedPackage === "standard";
           addItem({
             packageKey: pkg.key as "standard" | "express" | "signature",
             packageName: pkg.name,
             basePrice: pkg.price,
             addOns: {
-              dviajeros: selectedPackage === "standard" ? addDviajeros : false,
-              expressProcessing: selectedPackage === "standard" ? addExpress : false
+              dviajeros: isStandard ? addDviajeros : false,
+              expressProcessing: isStandard ? addExpress : false,
+              vipImmigration: isStandard ? addVipImmigration : false,
+              vipLounge: isStandard ? addVipLounge : false,
+              vipTransfer: isStandard ? addVipTransfer : false,
+              meetAndGreet: isStandard ? addMeetAndGreet : false,
             },
             travelers: 1
           });
