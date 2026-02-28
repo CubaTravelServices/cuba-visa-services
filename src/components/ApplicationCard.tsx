@@ -65,7 +65,11 @@ const ApplicationCard = () => {
   const [addMeetAndGreet, setAddMeetAndGreet] = useState(false);
 
   const basePrice = PACKAGES.find((p) => p.key === selectedPackage)?.price || 85;
-  const total = basePrice + (addDviajeros ? 19 : 0) + (addExpress ? 25 : 0) + (addVipImmigration ? 68 : 0) + (addVipLounge ? 70 : 0) + (addVipTransfer ? 65 : 0) + (addMeetAndGreet ? 125 : 0);
+  const allVipSelected = addVipImmigration && addVipLounge && addVipTransfer && addMeetAndGreet;
+  const vipCost = allVipSelected
+    ? 278.80
+    : (addVipImmigration ? 68 : 0) + (addVipLounge ? 70 : 0) + (addVipTransfer ? 65 : 0) + (addMeetAndGreet ? 125 : 0);
+  const total = basePrice + (addDviajeros ? 19 : 0) + (addExpress ? 25 : 0) + vipCost;
 
   const selectClass = "w-full bg-ivory border border-ivory-mid rounded px-3 py-2.5 text-sm text-navy focus:outline-none focus:border-gold transition-colors";
   const labelClass = "block text-[11px] font-semibold uppercase tracking-[0.08em] text-slate-brand mb-1.5";
@@ -136,6 +140,31 @@ const ApplicationCard = () => {
         <div>
           <label className={labelClass}>Add-Ons</label>
           <div className="space-y-3 bg-ivory border border-ivory-mid rounded p-4">
+            {/* VIP Bundle Toggle */}
+            <label className="flex items-start gap-3 cursor-pointer bg-gold/10 border border-gold/30 rounded-lg p-3 -mx-1">
+              <Checkbox
+                checked={addVipImmigration && addVipLounge && addVipTransfer && addMeetAndGreet}
+                onCheckedChange={(checked) => {
+                  const val = checked === true;
+                  setAddVipImmigration(val);
+                  setAddVipLounge(val);
+                  setAddVipTransfer(val);
+                  setAddMeetAndGreet(val);
+                }}
+                className="mt-0.5"
+              />
+              <div className="flex-1">
+                <div className="flex items-center justify-between">
+                  <span className="text-sm font-bold text-navy">⭐ Select All VIP Services</span>
+                  <div className="text-right">
+                    <span className="text-[11px] text-slate-400 line-through mr-1.5">$328</span>
+                    <span className="text-sm font-bold text-gold">+$278.80</span>
+                  </div>
+                </div>
+                <p className="text-[12px] text-slate-brand mt-0.5">Bundle all 4 VIP services and save 15%</p>
+              </div>
+            </label>
+            <hr className="border-ivory-mid" />
             <label className="flex items-start gap-3 cursor-pointer">
               <Checkbox checked={addDviajeros} onCheckedChange={(checked) => setAddDviajeros(checked === true)} className="mt-0.5" />
               <div className="flex-1">
