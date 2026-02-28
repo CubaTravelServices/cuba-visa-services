@@ -77,7 +77,7 @@ const HeroPricing = () => {
             ★ Most Popular
           </span>
         }
-        <h3 className="font-display text-[22px] font-bold text-navy min-h-[56px]">{plan.name}</h3>
+        <h3 className="font-display text-[16px] font-bold text-navy min-h-[56px]">{plan.name}</h3>
         <p className="text-[13px] min-h-[40px] mt-1 text-slate-brand">{plan.tagline}</p>
         <div className="mt-4 mb-1 min-h-[68px] flex items-end">
           <div>
