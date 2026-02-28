@@ -33,7 +33,7 @@ const plans = [
 },
 {
   key: "signature",
-  name: "Signature Service Cuba E-Visa/ VIP Immigration Lounge/Private Transfer/Meet&Greet",
+  name: "VIP Signature Service",
   tagline: "All Express benefits, plus optional VIP upgrades",
   price: 388.45,
   originalPrice: 457,
